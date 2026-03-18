@@ -67,7 +67,7 @@ nav.scrolled::before{opacity:.96;border-bottom-color:var(--border)}
 .mob-splash{display:none;position:fixed;inset:0;z-index:9000;background:var(--bg);overflow:hidden}
 .mob-splash-img{position:absolute;inset:0;background-size:cover;background-position:center}
 .mob-splash-grain{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E");background-repeat:repeat;background-size:128px 128px;mix-blend-mode:multiply;pointer-events:none}
-.mob-splash-overlay{position:absolute;inset:0;background:rgba(26,24,20,0.55);display:flex;align-items:center;justify-content:center;z-index:2;transition:opacity .6s ease}
+.mob-splash-overlay{position:absolute;inset:0;background:rgba(26,24,20,0.35);display:flex;align-items:center;justify-content:center;z-index:2;transition:opacity .6s ease}
 .mob-splash-overlay.hidden{opacity:0;pointer-events:none}
 .mob-splash-loader{display:flex;align-items:center;justify-content:center;position:relative;width:120px;height:120px}
 .mob-loader-svg{position:absolute;inset:0;width:120px;height:120px;transform:rotate(-90deg)}
@@ -225,6 +225,10 @@ nav,.work-section,.contact-section{padding-left:1.5rem;padding-right:1.5rem}
 .scroll-hint{display:none}
 .scroll-hint-mobile{display:flex;flex-direction:row;align-items:center;gap:.6rem;margin-top:1.5rem;opacity:0;animation:fadeUp .9s .8s ease forwards}
 .scroll-hint-mobile span{font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent)}
+.about-strip{grid-template-columns:1fr;padding:2.5rem 1.5rem;gap:0;border-bottom:none}
+.about-strip>div{padding:1.5rem 0;border-bottom:1px solid var(--border)}
+.about-strip>div:first-child{padding-top:0}
+.about-strip>div:last-child{border-bottom:none;padding-bottom:0}
 .scroll-line{display:none}
 .mast-ghost{display:none}
 .air-problem-panel{grid-template-columns:1fr;min-height:auto}
@@ -583,7 +587,7 @@ function updateStickyPos(){if(visibleCard===null)return;var btn=document.getElem
     'images/img_02.jpg',
     'images/img_20.jpg',
     'images/img_07.jpg',
-    'images/img_airbrace_hero.png',
+    'images/img_airbrace_lifestyle.png',
     'images/img_24.jpg',
     // Hero (final)
     'images/img_01.jpg'
@@ -665,7 +669,7 @@ function updateStickyPos(){if(visibleCard===null)return;var btn=document.getElem
     'images/img_02.jpg',
     'images/img_20.jpg',
     'images/img_07.jpg',
-    'images/img_airbrace_hero.png',
+    'images/img_airbrace_lifestyle.png',
     'images/img_24.jpg',
     // Final (Occupate hero)
     'images/img_34.jpg'
