@@ -55,7 +55,9 @@ nav.scrolled::before{opacity:.96;border-bottom-color:var(--border)}
 .mast-tags{display:flex;flex-wrap:wrap;gap:.65rem;opacity:0;animation:fadeUp .9s .8s ease forwards}
 .tag{padding:.35rem .9rem;border:1px solid var(--border);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;color:var(--muted);transition:all .25s;cursor:default}
 .tag:hover{border-color:var(--accent);color:var(--accent);background:rgba(200,80,42,.05)}
-.scroll-hint{position:absolute;bottom:2rem;right:27%;display:flex;flex-direction:column;align-items:center;gap:.75rem;opacity:0;animation:fadeUp 1s 1.3s ease forwards;z-index:10}
+.scroll-hint{position:static;display:flex;flex-direction:column;align-items:flex-end;gap:.6rem;opacity:0;animation:fadeUp 1s 1.3s ease forwards;z-index:10;margin-top:1.2rem}
+.scroll-hint .si-chevron{display:flex}
+.scroll-hint .scroll-line{display:none}
 .mast-reel{position:absolute;top:0;right:0;width:40%;height:100%;overflow:hidden;z-index:1;opacity:0;animation:fadeIn .3s .1s ease forwards}
 .mast-reel-img{position:absolute;inset:0;background-size:cover;background-position:center;transition:none}
 .mast-reel-grain{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E");background-repeat:repeat;background-size:128px 128px;mix-blend-mode:multiply;pointer-events:none}
@@ -74,13 +76,14 @@ nav.scrolled::before{opacity:.96;border-bottom-color:var(--border)}
 .mob-loader-text{font-family:'Mundial','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.7);text-align:center;max-width:80px;line-height:1.4;position:relative;z-index:1}
 .mob-splash.done{display:none}
 .mast-hero-bg{display:none;position:absolute;inset:0;background-image:url('images/img_01.jpg');background-size:cover;background-position:30% center;transform:scaleX(-1);z-index:0}
-.mast-hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(245,242,237,1) 0%,rgba(245,242,237,0.95) 45%,rgba(245,242,237,0.75) 65%,rgba(245,242,237,0.3) 100%);transform:scaleX(-1)}
+.mast-hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(245,242,237,0.95) 0%,rgba(245,242,237,0.85) 35%,rgba(245,242,237,0.6) 60%,rgba(245,242,237,0.2) 100%);transform:scaleX(-1)}
 .mast-hero-bg .mob-splash-grain-bg{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E");background-repeat:repeat;background-size:128px 128px;mix-blend-mode:multiply;pointer-events:none;transform:scaleX(-1)}
 @media(max-width:768px){.mob-splash{display:block}.mast-hero-bg{display:block}.masthead{overflow:hidden}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @media(max-width:768px){.mast-reel{display:none}.mast-reel-btns{position:static;align-items:flex-start;margin-top:1.5rem}}
 .scroll-hint span{font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);writing-mode:vertical-rl}
-.scroll-line{width:1px;height:4rem;background:linear-gradient(to bottom,var(--accent),transparent);animation:shPulse 2s ease-in-out infinite}
+.scroll-line{display:none}
+.scroll-hint-mobile{display:none}
 @keyframes shPulse{0%,100%{transform:scaleY(1);opacity:1}50%{transform:scaleY(.6);opacity:.4}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
 .about-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:3.5rem 3rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem}
@@ -210,21 +213,20 @@ footer{padding:2rem 3rem;border-top:1px solid var(--border);display:flex;justify
 @media(max-width:768px){
 nav,.work-section,.contact-section{padding-left:1.5rem;padding-right:1.5rem}
 .masthead{padding:0 1.5rem 2rem;position:relative;justify-content:center}
-.mast-eyebrow{margin-bottom:1rem;margin-top:2rem;color:var(--fg);font-weight:400}
+.mast-eyebrow{margin-bottom:1rem;margin-top:2rem;color:rgba(26,24,20,0.6);font-weight:400}
 .mast-name-row{flex-direction:column;align-items:flex-start;gap:1rem}
 .mast-name{font-size:clamp(4.5rem,14vw,6rem)}
 .mast-right{align-items:flex-start;width:100%;position:static;bottom:auto;right:auto}
 .mast-cat-btns{align-items:flex-start;flex-direction:row;flex-wrap:wrap;gap:.5rem}
 .mast-svc-btn{align-self:flex-start}
-.mast-bio{color:var(--fg);font-weight:400}
-.tag{color:var(--fg);border-color:rgba(26,24,20,.4);font-weight:400}
-.tag:hover{color:var(--accent);border-color:var(--accent)}
+.mast-bio{color:rgba(26,24,20,0.55);font-weight:400;text-align:left;max-width:50vw;margin-bottom:.5rem}
+.mast-tags{display:none}
 .mast-eyebrow::before{background:var(--accent)}
-.about-strip{grid-template-columns:1fr;padding:2.5rem 1.5rem}
-.contact-section{grid-template-columns:1fr;gap:2rem}
-.panel-caption{grid-template-columns:1fr;gap:1.5rem;padding:2rem 1.5rem}
-.panel-header{padding:2rem 1.5rem}
-.scroll-hint,.mast-ghost{display:none}
+.scroll-hint{display:none}
+.scroll-hint-mobile{display:flex;flex-direction:row;align-items:center;gap:.6rem;margin-top:1.5rem;opacity:0;animation:fadeUp .9s .8s ease forwards}
+.scroll-hint-mobile span{font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent)}
+.scroll-line{display:none}
+.mast-ghost{display:none}
 .air-problem-panel{grid-template-columns:1fr;min-height:auto}
 .opp-stats{grid-template-columns:1fr}
 .occ-problem-panel{padding:2.5rem 1.5rem}
@@ -339,11 +341,12 @@ document.addEventListener('DOMContentLoaded',function(){
 <div class="mast-content">
 <p class="mast-eyebrow">Industrial &amp; Product Designer</p>
 <div class="mast-name-row"><h1 class="mast-name">Avadh<br><em>Rana</em></h1>
-<div class="mast-right"><div class="mast-cat-btns"><a href="#hardware-design" class="mast-cat-btn">Hardware Design <span class="btn-arrow">&#x2193;</span></a><a href="#hardware-uiux" class="mast-cat-btn">Hardware + UI/UX <span class="btn-arrow">&#x2193;</span></a></div><a href="services.html" class="mast-svc-btn">Freelance Services <span class="btn-arrow">&#x2192;</span></a></div>
+<div class="mast-right"><div class="mast-cat-btns"><a href="#hardware-design" class="mast-cat-btn">Hardware Design <span class="btn-arrow">&#x2193;</span></a><a href="#hardware-uiux" class="mast-cat-btn">Hardware + UI/UX <span class="btn-arrow">&#x2193;</span></a></div><a href="services.html" class="mast-svc-btn">Freelance Services <span class="btn-arrow">&#x2192;</span></a><div class="scroll-hint"><span>Scroll</span><div class="si-chevron"></div><div class="scroll-line"></div></div></div>
 </div>
 <p class="mast-bio">Multidisciplinary designer focused on building intuitive, user-centered products. Previous graduate student from Georgia Tech, with a design background spanning Stryker, FlexiSpot, and more.</p>
+<div class="scroll-hint-mobile"><span>Scroll to explore</span><div class="si-chevron"></div></div>
 <div class="mast-tags"><span class="tag">Industrial Design</span><span class="tag">UX/UI</span><span class="tag">Product Development</span><span class="tag">Human-Centered Design</span></div>
-</div><div class="scroll-hint"><div class="scroll-line"></div><span>Scroll</span></div></section>
+</div></section>
 <div class="about-strip"><div><div class="about-label">Education</div><div class="about-value">MS Industrial Design &nbsp;&middot;&nbsp; Georgia Institute of Technology<br>&mdash;<br>BS Biomedical Engineering &nbsp;&middot;&nbsp; University of South Carolina</div></div><div><div class="about-label">Industry Experience</div><div class="about-value">Georgia Tech &nbsp;&middot;&nbsp; FlexiSpot &nbsp;&middot;&nbsp; Stryker</div></div><div><div class="about-label">Discipline</div><div class="about-value">Industrial &amp; Product Design</div></div></div>
 <div class="marquee-wrap"><div class="marquee-inner"><span>UI/UX</span><span class="dot">&middot;</span><span>Prototyping</span><span class="dot">&middot;</span><span>Human Factors</span><span class="dot">&middot;</span><span>3D Modeling</span><span class="dot">&middot;</span><span>Design Research</span><span class="dot">&middot;</span><span>Form Development</span><span class="dot">&middot;</span><span>CMF</span><span class="dot">&middot;</span><span>Ergonomics</span><span class="dot">&middot;</span><span>UI/UX</span><span class="dot">&middot;</span><span>Prototyping</span><span class="dot">&middot;</span><span>Human Factors</span><span class="dot">&middot;</span><span>3D Modeling</span><span class="dot">&middot;</span><span>Design Research</span><span class="dot">&middot;</span><span>Form Development</span><span class="dot">&middot;</span><span>CMF</span><span class="dot">&middot;</span><span>Ergonomics</span><span class="dot">&middot;</span></div></div>
 <section class="work-section" id="work">
@@ -580,7 +583,7 @@ function updateStickyPos(){if(visibleCard===null)return;var btn=document.getElem
     'images/img_02.jpg',
     'images/img_20.jpg',
     'images/img_07.jpg',
-    'images/img_13.jpg',
+    'images/img_airbrace_hero.png',
     'images/img_24.jpg',
     // Hero (final)
     'images/img_01.jpg'
@@ -617,6 +620,8 @@ function updateStickyPos(){if(visibleCard===null)return;var btn=document.getElem
     } else {
       reelImg.style.transform='none';
       reelImg.style.backgroundPosition='center';
+      reelImg.style.backgroundSize='cover';
+      reelImg.style.backgroundColor='transparent';
     }
     var d=delays[idx];
     idx++;
@@ -660,7 +665,7 @@ function updateStickyPos(){if(visibleCard===null)return;var btn=document.getElem
     'images/img_02.jpg',
     'images/img_20.jpg',
     'images/img_07.jpg',
-    'images/img_13.jpg',
+    'images/img_airbrace_hero.png',
     'images/img_24.jpg',
     // Final (Occupate hero)
     'images/img_34.jpg'
@@ -704,7 +709,7 @@ function updateStickyPos(){if(visibleCard===null)return;var btn=document.getElem
         if(mastContent){
           mastContent.style.opacity = '1';
           // Re-trigger animations by removing and re-adding them
-          var animated = mastContent.querySelectorAll('.mast-eyebrow, .mast-name, .mast-right, .mast-bio, .mast-tags');
+          var animated = mastContent.querySelectorAll('.mast-eyebrow, .mast-name, .mast-right, .mast-bio, .mast-tags, .scroll-hint-mobile');
           animated.forEach(function(el){
             var anim = getComputedStyle(el).animation;
             el.style.animation = 'none';
@@ -721,8 +726,12 @@ function updateStickyPos(){if(visibleCard===null)return;var btn=document.getElem
     // Center on subject for last image (Occupate - subject is left of center)
     if(idx === total-1){
       splashImg.style.backgroundPosition = '35% center';
+      splashImg.style.backgroundSize = 'cover';
+      splashImg.style.backgroundColor = 'transparent';
     } else {
       splashImg.style.backgroundPosition = 'center';
+      splashImg.style.backgroundSize = 'cover';
+      splashImg.style.backgroundColor = 'transparent';
     }
 
     if(idx < 4) loaderText.textContent = loadingPhrases[1];
