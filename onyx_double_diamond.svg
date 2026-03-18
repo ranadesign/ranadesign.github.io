@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 880" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="band-left" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2C5F7C"/>
+      <stop offset="100%" stop-color="#3A7FA5"/>
+    </linearGradient>
+    <linearGradient id="band-right" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3A7FA5"/>
+      <stop offset="100%" stop-color="#1E3A5F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="880" fill="#ffffff"/>
+
+  <!-- ==================== TITLE — TOP LEFT ==================== -->
+  <text x="50" y="40" font-size="13" font-weight="700" fill="#1A1814" letter-spacing="0.03em">Double Diamond</text>
+  <text x="50" y="58" font-size="13" font-weight="400" fill="#8A8479" letter-spacing="0.03em">Ergonomic Chair with Motorized Lumbar</text>
+
+  <!-- ==================== DIAMOND 1: Discover & Define ==================== -->
+  <polygon points="100,310 340,90 340,530" fill="#B8D4E8" opacity="0.4"/>
+  <polygon points="340,90 580,310 340,530" fill="#9BBDD4" opacity="0.35"/>
+  <line x1="340" y1="90" x2="340" y2="530" stroke="#4A7FA5" stroke-width="1" stroke-dasharray="6,4" opacity="0.3"/>
+
+  <!-- ==================== DIAMOND 2: Develop & Deliver ==================== -->
+  <polygon points="610,310 850,90 850,530" fill="#C8D5DE" opacity="0.4"/>
+  <polygon points="850,90 1090,310 850,530" fill="#A8B8C8" opacity="0.35"/>
+  <line x1="850" y1="90" x2="850" y2="530" stroke="#5A7A94" stroke-width="1" stroke-dasharray="6,4" opacity="0.3"/>
+
+  <!-- ==================== TEXT INSIDE DISCOVER ==================== -->
+  <g>
+    <text x="325" y="225" text-anchor="end" font-size="8.5" font-weight="700" fill="#2C5F7C">Understanding the</text>
+    <text x="325" y="238" text-anchor="end" font-size="8.5" font-weight="700" fill="#2C5F7C">Problem &amp; User Needs</text>
+    <text x="325" y="266" text-anchor="end" font-size="7.5" fill="#4A7A9A">User Shadowing</text>
+    <text x="325" y="279" text-anchor="end" font-size="7.5" fill="#4A7A9A">Contextual Inquiry</text>
+    <text x="325" y="292" text-anchor="end" font-size="7.5" fill="#4A7A9A">Anthropometric Analysis</text>
+    <text x="325" y="318" text-anchor="end" font-size="7.5" fill="#4A7A9A">User Personas</text>
+    <text x="325" y="331" text-anchor="end" font-size="7.5" fill="#4A7A9A">Competitive Teardowns</text>
+  </g>
+
+  <!-- ==================== TEXT INSIDE DEFINE ==================== -->
+  <g>
+    <text x="355" y="225" font-size="8.5" font-weight="700" fill="#3A6B8C">Framing the</text>
+    <text x="355" y="238" font-size="8.5" font-weight="700" fill="#3A6B8C">Design Challenge</text>
+    <text x="355" y="266" font-size="7.5" fill="#4A7A9A">Journey Mapping</text>
+    <text x="355" y="279" font-size="7.5" fill="#4A7A9A">Ergonomic Req. Spec</text>
+    <text x="355" y="292" font-size="7.5" fill="#4A7A9A">Design Brief</text>
+    <text x="355" y="318" font-size="7.5" fill="#4A7A9A">HMW Statement</text>
+  </g>
+
+  <!-- ==================== TEXT INSIDE DEVELOP ==================== -->
+  <g>
+    <text x="835" y="225" text-anchor="end" font-size="8.5" font-weight="700" fill="#4A6A80">Designing &amp;</text>
+    <text x="835" y="238" text-anchor="end" font-size="8.5" font-weight="700" fill="#4A6A80">Prototyping</text>
+    <text x="835" y="266" text-anchor="end" font-size="7.5" fill="#6A8A9A">Iterative Sketching &amp; CAD</text>
+    <text x="835" y="279" text-anchor="end" font-size="7.5" fill="#6A8A9A">Low-Fi Prototyping</text>
+    <text x="835" y="292" text-anchor="end" font-size="7.5" fill="#6A8A9A">CMF &amp; Form Dev.</text>
+    <text x="835" y="318" text-anchor="end" font-size="7.5" fill="#6A8A9A">Panel Geometry</text>
+  </g>
+
+  <!-- ==================== TEXT INSIDE DELIVER ==================== -->
+  <g>
+    <text x="865" y="225" font-size="8.5" font-weight="700" fill="#3A5A70">Validating &amp;</text>
+    <text x="865" y="238" font-size="8.5" font-weight="700" fill="#3A5A70">Delivering</text>
+    <text x="865" y="266" font-size="7.5" fill="#6A8A9A">User Testing</text>
+    <text x="865" y="279" font-size="7.5" fill="#6A8A9A">Ergonomic Evaluation</text>
+    <text x="865" y="292" font-size="7.5" fill="#6A8A9A">DFM &amp; Assembly</text>
+    <text x="865" y="318" font-size="7.5" fill="#6A8A9A">Regulatory Compliance</text>
+  </g>
+
+  <!-- ==================== CENTER BANDS ==================== -->
+  <rect x="100" y="542" width="480" height="26" rx="13" fill="url(#band-left)" opacity="0.9"/>
+  <text x="340" y="560" text-anchor="middle" font-size="10" font-weight="700" fill="#fff" letter-spacing="0.12em">DISCOVER &amp; DEFINE</text>
+
+  <rect x="610" y="542" width="480" height="26" rx="13" fill="url(#band-right)" opacity="0.9"/>
+  <text x="850" y="560" text-anchor="middle" font-size="10" font-weight="700" fill="#fff" letter-spacing="0.12em">DEVELOP &amp; DELIVER</text>
+
+  <!-- Center arrow between diamonds -->
+  <line x1="584" y1="310" x2="604" y2="310" stroke="#2C5F7C" stroke-width="2"/>
+  <polygon points="604,305 614,310 604,315" fill="#2C5F7C"/>
+
+  <!-- Entry arrow -->
+  <line x1="40" y1="310" x2="90" y2="310" stroke="#1A1814" stroke-width="1.5"/>
+  <polygon points="90,305 100,310 90,315" fill="#1A1814"/>
+
+  <!-- ==================== PHASE LABELS BELOW DIAMONDS ==================== -->
+  <text x="220" y="580" text-anchor="middle" font-size="10" font-weight="700" fill="#2C5F7C" letter-spacing="0.06em">Phase 1: DISCOVER</text>
+  <text x="460" y="580" text-anchor="middle" font-size="10" font-weight="700" fill="#3A6B8C" letter-spacing="0.06em">Phase 2: DEFINE</text>
+  <text x="730" y="580" text-anchor="middle" font-size="10" font-weight="700" fill="#4A6A80" letter-spacing="0.06em">Phase 3: DEVELOP</text>
+  <text x="970" y="580" text-anchor="middle" font-size="10" font-weight="700" fill="#3A5A70" letter-spacing="0.06em">Phase 4: DELIVER</text>
+
+  <!-- ==================== BOTTOM CONTENT ==================== -->
+  <!-- DISCOVER -->
+  <g transform="translate(128, 600)">
+    <text x="0" y="18" font-size="9.5" font-weight="700" fill="#1A1814">Methods</text>
+    <text x="0" y="33" font-size="8.5" fill="#6A7A84">User Shadowing</text>
+    <text x="0" y="45" font-size="7.5" fill="#8A9AA4" font-style="italic">(observing power users, gamers, creatives)</text>
+    <text x="0" y="60" font-size="8.5" fill="#6A7A84">Contextual Inquiry</text>
+    <text x="0" y="72" font-size="7.5" fill="#8A9AA4" font-style="italic">(work habits &amp; lumbar workarounds)</text>
+    <text x="0" y="87" font-size="8.5" fill="#6A7A84">Anthropometric Data Analysis</text>
+    <text x="0" y="99" font-size="7.5" fill="#8A9AA4" font-style="italic">(reach zones &amp; back dimensions)</text>
+
+    <text x="0" y="120" font-size="9.5" font-weight="700" fill="#1A1814">Activities</text>
+    <text x="0" y="135" font-size="8.5" fill="#6A7A84">User Personas</text>
+    <text x="0" y="150" font-size="8.5" fill="#6A7A84">Competitive Teardowns</text>
+    <text x="0" y="162" font-size="7.5" fill="#8A9AA4" font-style="italic">(mechanical &amp; motorized adjusters)</text>
+
+    <rect x="-6" y="176" width="185" height="36" rx="6" fill="#2C5F7C" opacity="0.08"/>
+    <text x="4" y="191" font-size="8" font-weight="700" fill="#2C5F7C">Key Research Goal</text>
+    <text x="4" y="203" font-size="7.5" fill="#2C5F7C">Identify critical ergonomic touchpoints</text>
+  </g>
+
+  <!-- DEFINE -->
+  <g transform="translate(368, 600)">
+    <text x="0" y="18" font-size="9.5" font-weight="700" fill="#1A1814">Synthesis</text>
+    <text x="0" y="33" font-size="8.5" fill="#6A7A84">Customer Journey Map</text>
+    <text x="0" y="45" font-size="7.5" fill="#8A9AA4" font-style="italic">(before, during, after adjustment)</text>
+    <text x="0" y="60" font-size="8.5" fill="#6A7A84">Ergonomic Requirement Spec</text>
+    <text x="0" y="72" font-size="7.5" fill="#8A9AA4" font-style="italic">(depth, height range, panel mechanics)</text>
+
+    <text x="0" y="93" font-size="9.5" font-weight="700" fill="#1A1814">Outputs</text>
+    <text x="0" y="108" font-size="8.5" fill="#6A7A84">Product Design Brief</text>
+    <text x="0" y="120" font-size="7.5" fill="#8A9AA4" font-style="italic">(power, UI, motorized control, battery)</text>
+    <text x="0" y="135" font-size="8.5" fill="#6A7A84">Problem Statement (HMW)</text>
+    <text x="0" y="147" font-size="7.5" fill="#8A9AA4" font-style="italic">(motorized depth + manual height)</text>
+
+    <rect x="-6" y="161" width="185" height="36" rx="6" fill="#3A6B8C" opacity="0.08"/>
+    <text x="4" y="176" font-size="8" font-weight="700" fill="#3A6B8C">Key Define Goal</text>
+    <text x="4" y="188" font-size="7.5" fill="#3A6B8C">Scope the motorized + passive system</text>
+  </g>
+
+  <!-- DEVELOP -->
+  <g transform="translate(628, 600)">
+    <text x="0" y="18" font-size="9.5" font-weight="700" fill="#1A1814">Methods</text>
+    <text x="0" y="33" font-size="8.5" fill="#6A7A84">Iterative Sketching &amp; CAD</text>
+    <text x="0" y="45" font-size="7.5" fill="#8A9AA4" font-style="italic">(motorized depth &amp; synced panel linkage)</text>
+    <text x="0" y="60" font-size="8.5" fill="#6A7A84">Low-Fidelity Prototyping</text>
+    <text x="0" y="72" font-size="7.5" fill="#8A9AA4" font-style="italic">(foam models for handlebar &amp; panel fit)</text>
+    <text x="0" y="87" font-size="8.5" fill="#6A7A84">Aesthetic Design &amp; CMF</text>
+    <text x="0" y="99" font-size="7.5" fill="#8A9AA4" font-style="italic">(performance textiles &amp; high-impact plastics)</text>
+    <text x="0" y="114" font-size="8.5" fill="#6A7A84">Form Development</text>
+    <text x="0" y="126" font-size="7.5" fill="#8A9AA4" font-style="italic">(sectioned back panel geometry)</text>
+
+    <rect x="-6" y="140" width="185" height="36" rx="6" fill="#4A6A80" opacity="0.08"/>
+    <text x="4" y="155" font-size="8" font-weight="700" fill="#4A6A80">Key Design Goal</text>
+    <text x="4" y="167" font-size="7.5" fill="#4A6A80">Robust motor system &amp; natural UI</text>
+  </g>
+
+  <!-- DELIVER -->
+  <g transform="translate(868, 600)">
+    <text x="0" y="18" font-size="9.5" font-weight="700" fill="#1A1814">Validation</text>
+    <text x="0" y="33" font-size="8.5" fill="#6A7A84">User Testing</text>
+    <text x="0" y="45" font-size="7.5" fill="#8A9AA4" font-style="italic">(usability sessions for depth &amp; height)</text>
+    <text x="0" y="60" font-size="8.5" fill="#6A7A84">Ergonomic Evaluation</text>
+    <text x="0" y="72" font-size="7.5" fill="#8A9AA4" font-style="italic">(pressure mapping across panel flaring)</text>
+
+    <text x="0" y="93" font-size="9.5" font-weight="700" fill="#1A1814">Production</text>
+    <text x="0" y="108" font-size="8.5" fill="#6A7A84">Manufacturing Feasibility (DFM)</text>
+    <text x="0" y="120" font-size="7.5" fill="#8A9AA4" font-style="italic">(motor, battery &amp; linkage assembly)</text>
+    <text x="0" y="135" font-size="8.5" fill="#6A7A84">Regulatory Compliance</text>
+    <text x="0" y="147" font-size="7.5" fill="#8A9AA4" font-style="italic">(safety certs for battery &amp; electronics)</text>
+
+    <rect x="-6" y="161" width="185" height="48" rx="6" fill="#3A5A70" opacity="0.08"/>
+    <text x="4" y="176" font-size="8" font-weight="700" fill="#3A5A70">Key Output</text>
+    <text x="4" y="188" font-size="7.5" fill="#3A5A70">Fully validated, production-ready</text>
+    <text x="4" y="200" font-size="7.5" fill="#3A5A70">design documentation</text>
+  </g>
+
+  <!-- ==================== SOLUTION CALLOUT ==================== -->
+  <g transform="translate(1140, 70)">
+    <rect x="0" y="0" width="220" height="300" rx="10" fill="#fff" stroke="#D0D8E0" stroke-width="1"/>
+    <rect x="0" y="0" width="220" height="36" rx="10" fill="#2C5F7C" opacity="0.08"/>
+    <text x="110" y="22" text-anchor="middle" font-size="9" font-weight="700" fill="#2C5F7C" letter-spacing="0.08em">THE SOLUTION</text>
+
+    <text x="16" y="56" font-size="8.5" font-weight="600" fill="#1A1814">Adaptive Lumbar System</text>
+    <text x="16" y="72" font-size="7.5" fill="#6A7A84">Motorized depth + manual height</text>
+    <text x="16" y="84" font-size="7.5" fill="#6A7A84">with synchronized panel flaring</text>
+
+    <line x1="16" y1="96" x2="204" y2="96" stroke="#D0D8E0" stroke-width="0.5"/>
+
+    <text x="16" y="115" font-size="8" font-weight="600" fill="#2C5F7C">Motorized Depth Control</text>
+    <text x="16" y="129" font-size="7.5" fill="#6A7A84">Twist handlebar to extend/retract</text>
+    <text x="16" y="141" font-size="7.5" fill="#6A7A84">lumbar via internal motor</text>
+
+    <line x1="16" y1="152" x2="204" y2="152" stroke="#D0D8E0" stroke-width="0.5"/>
+
+    <text x="16" y="170" font-size="8" font-weight="600" fill="#2C5F7C">Dynamic Flex-Back</text>
+    <text x="16" y="184" font-size="7.5" fill="#6A7A84">Panels separate adaptively when</text>
+    <text x="16" y="196" font-size="7.5" fill="#6A7A84">height is manually adjusted</text>
+
+    <line x1="16" y1="207" x2="204" y2="207" stroke="#D0D8E0" stroke-width="0.5"/>
+
+    <text x="16" y="225" font-size="8" font-weight="600" fill="#2C5F7C">Intuitive Height Placement</text>
+    <text x="16" y="239" font-size="7.5" fill="#6A7A84">Push handlebar to reposition —</text>
+    <text x="16" y="251" font-size="7.5" fill="#6A7A84">no learning curve required</text>
+
+    <line x1="16" y1="262" x2="204" y2="262" stroke="#D0D8E0" stroke-width="0.5"/>
+
+    <text x="16" y="280" font-size="8" font-weight="600" fill="#2C5F7C">Integrated Battery</text>
+    <text x="16" y="294" font-size="7.5" fill="#6A7A84">Housed below handlebar</text>
+  </g>
+
+  <!-- Arrow to solution -->
+  <line x1="1095" y1="310" x2="1132" y2="310" stroke="#2C5F7C" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="1132,305 1140,310 1132,315" fill="#2C5F7C"/>
+
+  <!-- Center arrow between diamonds -->
+  <line x1="584" y1="310" x2="604" y2="310" stroke="#2C5F7C" stroke-width="2"/>
+  <polygon points="604,305 614,310 604,315" fill="#2C5F7C"/>
+
+  <!-- Entry arrow -->
+  <line x1="40" y1="310" x2="90" y2="310" stroke="#1A1814" stroke-width="1.5"/>
+  <polygon points="90,305 100,310 90,315" fill="#1A1814"/>
+
+</svg>
