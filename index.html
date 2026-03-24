@@ -153,6 +153,10 @@ nav.scrolled::before{opacity:.96;border-bottom-color:var(--border)}
 .air-sticky{display:flex;align-items:center;gap:.85rem;background:rgba(74,127,165,.05);border:1px solid rgba(74,127,165,.15);border-left:3px solid #4A7FA5;border-radius:0 8px 8px 0;padding:.9rem 1.1rem}
 .air-sticky-num{font-family:'Syne',sans-serif;font-size:.6rem;font-weight:700;color:#4A7FA5;letter-spacing:.14em;flex-shrink:0}
 .air-sticky-text{font-size:.78rem;line-height:1.7;color:rgba(0,0,0,.65)}
+.mint-accent .air-sticky-num{color:#5BA88C}
+.mint-accent .app-stat-num{color:#5BA88C}
+.mint-accent .app-stat-label{color:#5BA88C}
+.mint-accent .air-sticky{border-left-color:#5BA88C;background:rgba(91,168,140,.05);border-color:rgba(91,168,140,.15)}
 .opp-chevrons{display:flex;flex-direction:column;gap:0;width:100%}
 .opp-chev-row{display:flex;align-items:center;gap:1.5rem;margin-bottom:1.6rem}
 .opp-chev{position:relative;display:flex;align-items:center;gap:.9rem;padding:.85rem 1.4rem .85rem 1.1rem;min-width:210px;flex-shrink:0;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 50%,calc(100% - 16px) 100%,0 100%)}
@@ -219,11 +223,11 @@ nav,.work-section,.contact-section{padding-left:1.5rem;padding-right:1.5rem}
 .mast-right{align-items:flex-start;width:100%;position:static;bottom:auto;right:auto}
 .mast-cat-btns{align-items:flex-start;flex-direction:row;flex-wrap:wrap;gap:.5rem}
 .mast-svc-btn{align-self:flex-start}
-.mast-bio{color:rgba(26,24,20,0.55);font-weight:400;text-align:left;max-width:50vw;margin-bottom:.5rem}
+.mast-bio{color:rgba(26,24,20,0.55);font-weight:400;text-align:left;max-width:50vw;margin-bottom:0;line-height:1.5;font-size:.8rem}
 .mast-tags{display:none}
 .mast-eyebrow::before{background:var(--accent)}
 .scroll-hint{display:none}
-.scroll-hint-mobile{display:flex;flex-direction:row;align-items:center;gap:.6rem;margin-top:1.5rem;opacity:0;animation:fadeUp .9s .8s ease forwards}
+.scroll-hint-mobile{display:flex;flex-direction:row;align-items:center;gap:.6rem;margin-top:.75rem;opacity:0;animation:fadeUp .9s .8s ease forwards}
 .scroll-hint-mobile span{font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent)}
 .about-strip{grid-template-columns:1fr;padding:2.5rem 1.5rem;gap:0;border-bottom:none}
 .about-strip>div{padding:1.5rem 0;border-bottom:1px solid var(--border)}
@@ -357,12 +361,40 @@ document.addEventListener('DOMContentLoaded',function(){
 <div class="section-header" id="hardware-design"><span class="section-num">01</span><h2 class="section-title">Hardware Design</h2></div>
 <div class="project-card" id="card-0">
 <div class="card-trigger" onclick="toggleCard(0)">
-<div class="card-bg"><img src="images/img_01.jpg" alt="Onyx Chair"></div>
+<div class="card-bg"><img src="images/wf_8.png" alt="Wayfarer"></div>
 <div class="card-overlay"></div>
-<div class="card-trigger-info"><div class="card-top"><span class="card-num">Project 01 &nbsp;/&nbsp; 2026</span><h3 class="card-name">Onyx Chair</h3><span class="card-type"><span>Furniture</span><span>Ergonomics</span><span>Office Chair</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
+<div class="card-trigger-info"><div class="card-top"><span class="card-num">Project 01 &nbsp;/&nbsp; 2025</span><h3 class="card-name">Wayfarer</h3><span class="card-type"><span>Kitchen</span><span>Induction</span><span>Portable</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
 </div>
 <div class="project-panel">
-<div class="panel-header"><div class="panel-title-block"><span class="panel-subtitle">Furniture &nbsp;&middot;&nbsp; Ergonomics &nbsp;&middot;&nbsp; 8 Weeks &nbsp;&middot;&nbsp; 2026</span><h2 class="panel-title">Onyx Chair</h2></div><button class="panel-close" onclick="toggleCard(0);event.stopPropagation()">&#x2715;</button></div>
+<div class="panel-header"><div class="panel-title-block"><span class="panel-subtitle">Kitchen &nbsp;&middot;&nbsp; Product Design &nbsp;&middot;&nbsp; 3 Weeks &nbsp;&middot;&nbsp; 2025</span><h2 class="panel-title">Wayfarer</h2></div><button class="panel-close" onclick="toggleCard(0);event.stopPropagation()">&#x2715;</button></div>
+<div class="panel-caption"><div class="panel-desc">Wayfarer is a portable induction cooktop burner designed for FlexiSpot, featuring a low-profile form factor with an intuitive knurled aluminum knob and backlit touch controls.</div><div class="panel-specs"><div class="spec"><span class="spec-label">Category</span><span class="spec-value">Kitchen &amp; Appliance</span></div>
+<div class="spec"><span class="spec-label">Focus</span><span class="spec-value">Portable Induction Cooking</span></div>
+<div class="spec"><span class="spec-label">Duration</span><span class="spec-value">3 Weeks</span></div>
+<div class="spec"><span class="spec-label">Year</span><span class="spec-value">2025</span></div>
+<div class="spec"><span class="spec-label">Methods</span><span class="spec-value">Sketching &middot; CAD &middot; CMF &middot; Component Analysis</span></div>
+</div></div>
+<div class="panel-body"><div class="gal"><div class="gal-full"><img src="images/wf_1.png" loading="lazy"></div>
+<div class="gal-full"><div class="air-problem-panel mint-accent"><div class="app-left"><div class="app-eyebrow">The Problem</div><h3 class="app-headline">Portable cooktops exist.<br>But they all look the same.</h3><p class="app-body">Existing portable induction burners are bulky, cheaply built, and lack any sense of design intentionality &#8212; <strong>turning a countertop staple into an eyesore.</strong></p><div class="app-stat"><span class="app-stat-num">90%</span><span class="app-stat-label">of portable induction burners on the market share the same generic form</span></div></div><div class="app-right"><div class="app-eyebrow" style="margin-bottom:1.25rem">Pain Points</div><div style="display:flex;flex-direction:column;gap:.85rem"><div class="air-sticky"><div class="air-sticky-num">01</div><div class="air-sticky-text">Bulky form factors that waste counter space and resist storage</div></div><div class="air-sticky"><div class="air-sticky-num">02</div><div class="air-sticky-text">Confusing button-heavy interfaces with unnecessary features</div></div><div class="air-sticky"><div class="air-sticky-num">03</div><div class="air-sticky-text">Cheap materials and finishes that don&#8217;t match modern kitchen aesthetics</div></div></div></div></div></div>
+<div class="gal-full"><img src="images/wf_2.png" loading="lazy"></div>
+<div class="gal-full onyx-spacer" style="height:6rem;background:#ffffff"></div>
+<div class="gal-full"><img src="images/wf_3.png" loading="lazy"></div>
+<div class="gal-full onyx-spacer" style="height:6rem;background:#ffffff"></div>
+<div class="gal-full"><img src="images/wf_4.png" loading="lazy"></div>
+<div class="gal-full onyx-spacer" style="height:6rem;background:#ffffff"></div>
+<div class="gal-full"><img src="images/wf_5.png" loading="lazy"></div>
+<div class="gal-full"><img src="images/wf_6.png" loading="lazy"></div>
+<div class="gal-full"><img src="images/wf_7.png" loading="lazy"></div>
+<div class="gal-full"><img src="images/wf_8.png" loading="lazy"></div>
+</div></div>
+</div></div>
+<div class="project-card" id="card-1">
+<div class="card-trigger" onclick="toggleCard(1)">
+<div class="card-bg"><img src="images/img_01.jpg" alt="Onyx Chair"></div>
+<div class="card-overlay"></div>
+<div class="card-trigger-info"><div class="card-top"><span class="card-num">Project 02 &nbsp;/&nbsp; 2026</span><h3 class="card-name">Onyx Chair</h3><span class="card-type"><span>Furniture</span><span>Ergonomics</span><span>Office Chair</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
+</div>
+<div class="project-panel">
+<div class="panel-header"><div class="panel-title-block"><span class="panel-subtitle">Furniture &nbsp;&middot;&nbsp; Ergonomics &nbsp;&middot;&nbsp; 8 Weeks &nbsp;&middot;&nbsp; 2026</span><h2 class="panel-title">Onyx Chair</h2></div><button class="panel-close" onclick="toggleCard(1);event.stopPropagation()">&#x2715;</button></div>
 <div class="panel-caption"><div class="panel-desc">The Onyx Chair is an office chair with motorized lumbar support, conceived through an intensive 8-week design sprint.</div><div class="panel-specs"><div class="spec"><span class="spec-label">Category</span><span class="spec-value">Furniture &amp; Seating</span></div>
 <div class="spec"><span class="spec-label">Focus</span><span class="spec-value">Ergonomics &amp; Motorized Lumbar</span></div>
 <div class="spec"><span class="spec-label">Duration</span><span class="spec-value">8 Weeks</span></div>
@@ -380,10 +412,10 @@ document.addEventListener('DOMContentLoaded',function(){
     <div class="aop-items"><div class="air-sticky"><div class="air-sticky-num">01</div><div class="air-sticky-text"><strong>Motorized Lumbar Support</strong> &#8212; Precise motorized depth control that adjusts effortlessly without interrupting the user&#8217;s workflow.</div></div><div class="air-sticky"><div class="air-sticky-num">02</div><div class="air-sticky-text"><strong>Dynamic Flex-Back</strong> &#8212; Sectioned back panels that move independently, mirroring the natural curvature and motion of the spine.</div></div><div class="air-sticky"><div class="air-sticky-num">03</div><div class="air-sticky-text"><strong>Intuitive Height Placement</strong> &#8212; Manual height adjustment kept simple, so users can place support exactly where they need it without a learning curve.</div></div></div>
   </div>
 </div></div>
-<div class="gal-full onyx-spacer" style="height:10rem;background:#ffffff"></div>
+<div class="gal-full onyx-spacer" style="height:14rem;background:#ffffff"></div>
 
 <div class="gal-full"><img src="images/onyx_double_diamond.svg" loading="lazy"></div>
-<div class="gal-full onyx-spacer" style="height:10rem;background:#ffffff"></div>
+<div class="gal-full onyx-spacer" style="height:14rem;background:#ffffff"></div>
 
 <div class="gal-full"><img src="images/img_05_new.png" loading="lazy"></div>
 <div class="gal-full"><img src="images/img_53.png" loading="lazy"></div>
@@ -405,14 +437,14 @@ document.addEventListener('DOMContentLoaded',function(){
 <div class="gal-full"><img src="images/img_01.jpg" loading="lazy"></div>
 </div></div>
 </div></div>
-<div class="project-card" id="card-1">
-<div class="card-trigger" onclick="toggleCard(1)">
+<div class="project-card" id="card-2">
+<div class="card-trigger" onclick="toggleCard(2)">
 <div class="card-bg"><img src="images/img_12.jpg" alt="AirBrace"></div>
 <div class="card-overlay"></div>
-<div class="card-trigger-info"><div class="card-top"><span class="card-num">Project 02 &nbsp;/&nbsp; 2023</span><h3 class="card-name">AirBrace</h3><span class="card-type"><span>Medical Device</span><span>Wearable</span><span>Rehabilitation</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
+<div class="card-trigger-info"><div class="card-top"><span class="card-num">Project 03 &nbsp;/&nbsp; 2023</span><h3 class="card-name">AirBrace</h3><span class="card-type"><span>Medical Device</span><span>Wearable</span><span>Rehabilitation</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
 </div>
 <div class="project-panel">
-<div class="panel-header"><div class="panel-title-block"><span class="panel-subtitle">Medical Device &nbsp;&middot;&nbsp; Wearable &nbsp;&middot;&nbsp; 8 Weeks &nbsp;&middot;&nbsp; 2023</span><h2 class="panel-title">AirBrace</h2></div><button class="panel-close" onclick="toggleCard(1);event.stopPropagation()">&#x2715;</button></div>
+<div class="panel-header"><div class="panel-title-block"><span class="panel-subtitle">Medical Device &nbsp;&middot;&nbsp; Wearable &nbsp;&middot;&nbsp; 8 Weeks &nbsp;&middot;&nbsp; 2023</span><h2 class="panel-title">AirBrace</h2></div><button class="panel-close" onclick="toggleCard(2);event.stopPropagation()">&#x2715;</button></div>
 <div class="panel-caption"><div class="panel-desc">AirBrace is an air-circulating leg brace designed for post-surgical rehabilitation and injury recovery.</div><div class="panel-specs"><div class="spec"><span class="spec-label">Category</span><span class="spec-value">Medical Device &amp; Wearable</span></div>
 <div class="spec"><span class="spec-label">Focus</span><span class="spec-value">Rehabilitation &amp; Airflow</span></div>
 <div class="spec"><span class="spec-label">Duration</span><span class="spec-value">8 Weeks</span></div>
@@ -430,10 +462,10 @@ document.addEventListener('DOMContentLoaded',function(){
     <div class="aop-items"><div class="air-sticky"><div class="air-sticky-num">01</div><div class="air-sticky-text"><strong>Channeled Airflow</strong> &#8212; Design internal pathways that move air through the brace passively with each step.</div></div><div class="air-sticky"><div class="air-sticky-num">02</div><div class="air-sticky-text"><strong>Breathable Materials</strong> &#8212; Replace sealed padding with open-cell mesh that wicks moisture and encourages evaporation.</div></div><div class="air-sticky"><div class="air-sticky-num">03</div><div class="air-sticky-text"><strong>Step-Powered Cooling</strong> &#8212; Harness walking compression to pump air &#8212; no battery, no added hardware, just motion.</div></div></div>
   </div>
 </div></div>
-<div class="gal-full onyx-spacer" style="height:10rem;background:#ffffff"></div>
+<div class="gal-full onyx-spacer" style="height:14rem;background:#ffffff"></div>
 
 <div class="gal-full"><img src="images/airbrace_double_diamond.svg" loading="lazy"></div>
-<div class="gal-full onyx-spacer" style="height:10rem;background:#ffffff"></div>
+<div class="gal-full onyx-spacer" style="height:14rem;background:#ffffff"></div>
 
 <div class="gal-full"><img src="images/img_15.jpg" loading="lazy"></div>
 <div class="gal-full"><img src="images/img_16.jpg" loading="lazy"></div>
@@ -451,14 +483,14 @@ document.addEventListener('DOMContentLoaded',function(){
 </div></div>
 </div></div>
 <div class="section-header" id="hardware-uiux" style="margin-top:2rem"><span class="section-num">02</span><h2 class="section-title">Hardware + UI/UX</h2></div>
-<div class="project-card" id="card-2">
-<div class="card-trigger" onclick="toggleCard(2)">
+<div class="project-card" id="card-3">
+<div class="card-trigger" onclick="toggleCard(3)">
 <div class="card-bg"><img src="images/img_26.jpg" alt="Lifewoven"></div>
 <div class="card-overlay"></div>
-<div class="card-trigger-info"><div class="card-top"><span class="card-num">Project 03 &nbsp;/&nbsp; 2024</span><h3 class="card-name">Lifewoven</h3><span class="card-type"><span>Transportation</span><span>Healthcare</span><span>Systems Design</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
+<div class="card-trigger-info"><div class="card-top"><span class="card-num">Project 04 &nbsp;/&nbsp; 2024</span><h3 class="card-name">Lifewoven</h3><span class="card-type"><span>Transportation</span><span>Healthcare</span><span>Systems Design</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
 </div>
 <div class="project-panel">
-<div class="panel-header"><div class="panel-title-block"><span class="panel-subtitle">Transportation &nbsp;&middot;&nbsp; Healthcare &nbsp;&middot;&nbsp; Systems Design &nbsp;&middot;&nbsp; 2024</span><h2 class="panel-title">Lifewoven</h2></div><button class="panel-close" onclick="toggleCard(2);event.stopPropagation()">&#x2715;</button></div>
+<div class="panel-header"><div class="panel-title-block"><span class="panel-subtitle">Transportation &nbsp;&middot;&nbsp; Healthcare &nbsp;&middot;&nbsp; Systems Design &nbsp;&middot;&nbsp; 2024</span><h2 class="panel-title">Lifewoven</h2></div><button class="panel-close" onclick="toggleCard(3);event.stopPropagation()">&#x2715;</button></div>
 <div class="panel-caption"><div class="panel-desc">Lifewoven is a mobile medical checkup vehicle designed to bring healthcare assessments and medication to people with debilitating chronic conditions.</div><div class="panel-specs"><div class="spec"><span class="spec-label">Category</span><span class="spec-value">Transportation &amp; Systems Design</span></div>
 <div class="spec"><span class="spec-label">Focus</span><span class="spec-value">Mobile Healthcare &amp; AI</span></div>
 <div class="spec"><span class="spec-label">Sponsor</span><span class="spec-value">Cognizant</span></div>
@@ -474,14 +506,14 @@ document.addEventListener('DOMContentLoaded',function(){
 <div class="gal-full"><img src="images/img_33.jpg" loading="lazy"></div>
 </div></div>
 </div></div>
-<div class="project-card" id="card-3">
-<div class="card-trigger" onclick="toggleCard(3)">
+<div class="project-card" id="card-4">
+<div class="card-trigger" onclick="toggleCard(4)">
 <div class="card-bg"><img src="images/img_34.jpg" alt="Occupate"></div>
 <div class="card-overlay"></div>
-<div class="card-trigger-info"><div class="card-top"><span class="card-num">Project 04 &nbsp;/&nbsp; 2023</span><h3 class="card-name">Occupate</h3><span class="card-type"><span>Hardware</span><span>UI/UX</span><span>Campus Design</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
+<div class="card-trigger-info"><div class="card-top"><span class="card-num">Project 05 &nbsp;/&nbsp; 2023</span><h3 class="card-name">Occupate</h3><span class="card-type"><span>Hardware</span><span>UI/UX</span><span>Campus Design</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
 </div>
 <div class="project-panel">
-<div class="panel-header"><div class="panel-title-block"><span class="panel-subtitle">Hardware &nbsp;&middot;&nbsp; UI/UX &nbsp;&middot;&nbsp; 3 Weeks &nbsp;&middot;&nbsp; 2023</span><h2 class="panel-title">Occupate</h2></div><button class="panel-close" onclick="toggleCard(3);event.stopPropagation()">&#x2715;</button></div>
+<div class="panel-header"><div class="panel-title-block"><span class="panel-subtitle">Hardware &nbsp;&middot;&nbsp; UI/UX &nbsp;&middot;&nbsp; 3 Weeks &nbsp;&middot;&nbsp; 2023</span><h2 class="panel-title">Occupate</h2></div><button class="panel-close" onclick="toggleCard(4);event.stopPropagation()">&#x2715;</button></div>
 <div class="panel-caption"><div class="panel-desc">Occupate is a live occupancy mapping system for university study areas.</div><div class="panel-specs"><div class="spec"><span class="spec-label">Category</span><span class="spec-value">Hardware &amp; UI/UX</span></div>
 <div class="spec"><span class="spec-label">Focus</span><span class="spec-value">Campus Occupancy &amp; Wayfinding</span></div>
 <div class="spec"><span class="spec-label">Duration</span><span class="spec-value">3 Weeks</span></div>
@@ -544,22 +576,6 @@ function updateVisibleCard(){var btn=document.getElementById('stickyClose');var 
 function hideStickyClose(){var btn=document.getElementById('stickyClose');if(btn)hidePill(btn);}
 function updateStickyPos(){if(visibleCard===null)return;var btn=document.getElementById('stickyClose');if(!btn||!btn.classList.contains('visible'))return;var card=document.getElementById('card-'+visibleCard);if(!card)return;var panel=card.querySelector('.project-panel');var panelRect=panel.getBoundingClientRect();var btnH=btn.offsetHeight;var gap=32;if(panelRect.bottom<(window.innerHeight-gap-btnH)){var topPx=card.offsetTop+panel.offsetTop+panel.offsetHeight-btnH-gap;btn.style.position='absolute';btn.style.top=topPx+'px';btn.style.bottom='auto';btn.style.right='2rem';}else{btn.style.position='fixed';btn.style.top='auto';btn.style.bottom='2rem';btn.style.right='2rem';}}
 window.addEventListener('scroll',function(){updateVisibleCard();updateStickyPos();});</script><script>
-window.addEventListener('scroll',function(){var nav=document.getElementById('nav');if(window.scrollY>60){nav.classList.add('scrolled');}else{nav.classList.remove('scrolled');}});
-var ghost=document.getElementById('ghostText');window.addEventListener('scroll',function(){if(ghost){ghost.style.transform='translateY(calc(-50% + '+(window.scrollY*0.14)+'px))';}});
-document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href').slice(1);var target=document.getElementById(id);if(!target)return;e.preventDefault();var top=target.getBoundingClientRect().top+window.pageYOffset-80;window.scrollTo({top:top,behavior:'smooth'});});});
-document.addEventListener('contextmenu',function(e){if(e.target.tagName==='IMG')e.preventDefault();});
-document.addEventListener('dragstart',function(e){if(e.target.tagName==='IMG')e.preventDefault();});
-var visibleCard=null;
-function toggleCard(idx){var card=document.getElementById('card-'+idx);var wasOpen=card.classList.contains('open');if(wasOpen){card.classList.remove('open');hideScrollIndicator();updateVisibleCard();}else{card.classList.add('open');setTimeout(function(){var panel=card.querySelector('.project-panel');var panelTop=panel.getBoundingClientRect().top+window.pageYOffset-72;window.scrollTo({top:panelTop,behavior:'smooth'});},80);setTimeout(function(){showScrollIndicator();},750);}}
-function closeCurrent(){if(visibleCard!==null){var card=document.getElementById('card-'+visibleCard);var cardTop=card.getBoundingClientRect().top+window.pageYOffset-80;window.scrollTo({top:cardTop,behavior:'smooth'});var dist=Math.abs(window.pageYOffset-cardTop);var delay=dist<100?80:Math.min(dist*0.4,350);setTimeout(function(){card.classList.remove('open');visibleCard=null;hideStickyClose();hideScrollIndicator();},delay);}}
-function showScrollIndicator(){var si=document.getElementById('scrollIndicator');if(!si)return;si.style.display='flex';requestAnimationFrame(function(){si.classList.add('visible');si.classList.remove('hidden');});function onScroll(){hideScrollIndicator();window.removeEventListener('scroll',onScroll);}window.addEventListener('scroll',onScroll);}
-function hideScrollIndicator(){var si=document.getElementById('scrollIndicator');if(!si)return;si.classList.remove('visible');si.classList.add('hidden');setTimeout(function(){si.style.display='none';si.classList.remove('hidden');},350);}
-function showPill(el){el.style.display='flex';requestAnimationFrame(function(){el.classList.add('visible');el.classList.remove('hidden');});}
-function hidePill(el){el.classList.remove('visible');el.classList.add('hidden');setTimeout(function(){if(el.classList.contains('hidden')){el.style.display='none';el.classList.remove('hidden');}},350);}
-function getVisibleOpenCard(){var cards=document.querySelectorAll('.project-card.open');var best=null,bestOverlap=0;for(var i=0;i<cards.length;i++){var r=cards[i].getBoundingClientRect();var overlap=Math.max(0,Math.min(r.bottom,window.innerHeight)-Math.max(r.top,0));if(overlap>bestOverlap){bestOverlap=overlap;best=cards[i];}}return best;}
-function updateVisibleCard(){var btn=document.getElementById('stickyClose');var openCards=document.querySelectorAll('.project-card.open');if(openCards.length===0){visibleCard=null;if(btn)hidePill(btn);return;}var best=getVisibleOpenCard();if(!best)return;var newIdx=parseInt(best.id.replace('card-',''),10);if(newIdx===visibleCard&&btn&&btn.classList.contains('visible')){updateStickyPos();return;}visibleCard=newIdx;if(btn){btn.style.position='fixed';btn.style.top='auto';btn.style.bottom='2rem';btn.style.right='2rem';showPill(btn);}}
-function hideStickyClose(){var btn=document.getElementById('stickyClose');if(btn)hidePill(btn);}
-function updateStickyPos(){if(visibleCard===null)return;var btn=document.getElementById('stickyClose');if(!btn||!btn.classList.contains('visible'))return;var card=document.getElementById('card-'+visibleCard);if(!card)return;var panel=card.querySelector('.project-panel');var panelRect=panel.getBoundingClientRect();var btnH=btn.offsetHeight;var gap=32;if(panelRect.bottom<(window.innerHeight-gap-btnH)){var topPx=card.offsetTop+panel.offsetTop+panel.offsetHeight-btnH-gap;btn.style.position='absolute';btn.style.top=topPx+'px';btn.style.bottom='auto';btn.style.right='2rem';}else{btn.style.position='fixed';btn.style.top='auto';btn.style.bottom='2rem';btn.style.right='2rem';}}
 </script>
 <script>
 (function(){
@@ -576,16 +592,19 @@ function updateStickyPos(){if(visibleCard===null)return;var btn=document.getElem
     'images/img_15.jpg',
     // Sketches & Development
     'images/img_06_new.png',
+    'images/wf_2.png',
     'images/img_10.jpg',
     'images/img_16.jpg',
     'images/img_17.jpg',
     // CAD & Form
+    'images/wf_3.png',
     'images/img_18.jpg',
     'images/img_19.jpg',
     'images/img_08.jpg',
     // Renders & Lifestyle
     'images/img_02.jpg',
     'images/img_20.jpg',
+    'images/wf_7.png',
     'images/img_07.jpg',
     'images/img_airbrace_lifestyle.png',
     'images/img_24.jpg',
@@ -596,13 +615,12 @@ function updateStickyPos(){if(visibleCard===null)return;var btn=document.getElem
   // Preload all images
   images.forEach(function(src){var i=new Image();i.src=src;});
 
-  // Timing: starts very fast (80ms), decelerates to slow (800ms) on the last few
+  // Timing: starts very fast, decelerates to slow — adjusted for image count to keep same total duration
   var total=images.length;
   var delays=[];
   for(var i=0;i<total;i++){
-    var progress=i/(total-1); // 0 to 1
-    // Cubic easing: starts fast, ends slow
-    var delay=80+720*Math.pow(progress,2.5);
+    var progress=i/(total-1);
+    var delay=60+643*Math.pow(progress,2.5);
     delays.push(Math.round(delay));
   }
 
@@ -660,14 +678,17 @@ function updateStickyPos(){if(visibleCard===null)return;var btn=document.getElem
     'images/img_53.png',
     'images/img_15.jpg',
     'images/img_06_new.png',
+    'images/wf_2.png',
     'images/img_10.jpg',
     'images/img_16.jpg',
     'images/img_17.jpg',
+    'images/wf_3.png',
     'images/img_18.jpg',
     'images/img_19.jpg',
     'images/img_08.jpg',
     'images/img_02.jpg',
     'images/img_20.jpg',
+    'images/wf_7.png',
     'images/img_07.jpg',
     'images/img_airbrace_lifestyle.png',
     'images/img_24.jpg',
@@ -681,7 +702,7 @@ function updateStickyPos(){if(visibleCard===null)return;var btn=document.getElem
   var delays = [];
   for(var i=0; i<total; i++){
     var progress = i/(total-1);
-    var delay = 80 + 720 * Math.pow(progress, 2.5);
+    var delay = 60 + 643 * Math.pow(progress, 2.5);
     delays.push(Math.round(delay));
   }
 
