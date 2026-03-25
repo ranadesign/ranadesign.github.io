@@ -169,6 +169,43 @@ nav.scrolled::before{opacity:.96;border-bottom-color:var(--border)}
 .opp-chev-title{font-family:'Syne',sans-serif;font-size:.8rem;font-weight:600;color:#fff;margin-bottom:.3rem}
 .opp-chev-text{font-size:.75rem;line-height:1.65;color:rgba(255,255,255,.55)}
 .occ-problem-panel{background:#3d3d3d;display:flex;flex-direction:column;gap:0;line-height:normal;padding:4rem 3.5rem;min-height:840px;justify-content:center;font-family:'Mundial','Helvetica Neue',Helvetica,Arial,sans-serif}
+/* Safety Infographic */
+.occ-safety-infographic{position:relative;overflow:hidden;background:#fff}
+.occ-safety-split{display:grid;grid-template-columns:1fr 1.2fr;min-height:700px}
+.occ-safety-text{padding:4rem 3.5rem;display:flex;flex-direction:column;justify-content:center}
+.occ-safety-eyebrow{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:#C9A84C;margin-bottom:1.2rem}
+.occ-safety-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;line-height:1.1;color:var(--fg);letter-spacing:-.02em;margin-bottom:1.5rem}
+.occ-safety-sub{font-size:.85rem;line-height:1.85;color:var(--muted);margin-bottom:2rem;max-width:480px}
+.occ-safety-stats-inline{display:flex;gap:1.5rem;margin-bottom:2rem}
+.occ-safety-stat-inline{flex:1;background:rgba(0,0,0,.03);border:1px solid var(--border);border-radius:12px;padding:1.5rem;display:flex;flex-direction:column;gap:.4rem}
+.occ-safety-stat--accent .occ-safety-stat-num{color:#C9A84C}
+.occ-safety-stat--accent{background:rgba(201,168,76,.06);border-color:rgba(201,168,76,.2)}
+.occ-safety-stat-num{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;color:var(--fg);line-height:1}
+.occ-safety-stat-unit{font-size:.5em;margin-left:.1em}
+.occ-safety-stat-label{font-size:.75rem;line-height:1.5;color:var(--muted)}
+.occ-safety-callouts{display:flex;flex-direction:column;gap:.65rem}
+.occ-safety-callout{display:flex;align-items:center;gap:.65rem;font-size:.78rem;color:var(--muted)}
+.occ-safety-callout svg{width:20px;height:20px;flex-shrink:0}
+.occ-safety-image{overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
+.occ-safety-image img{width:130%;max-width:none;height:auto;pointer-events:none;display:block;margin-left:-20%}
+@media(max-width:768px){.occ-safety-split{grid-template-columns:1fr}.occ-safety-text{padding:2.5rem 1.5rem}.occ-safety-image{padding:0 1rem 2rem}.occ-safety-image img{width:100%}.occ-safety-stats-inline{flex-direction:column}.occ-safety-stat-num{font-size:1.8rem}}
+/* Pain Points & Opportunities */
+.occ-painopp-panel{background:#fff;padding:4rem 3.5rem}
+.occ-painopp-header{margin-bottom:2.5rem}
+.occ-painopp-eyebrow{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:#C9A84C;margin-bottom:1rem}
+.occ-painopp-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;line-height:1.1;color:var(--fg);letter-spacing:-.02em}
+.occ-painopp-rows{display:flex;flex-direction:column;gap:1.25rem}
+.occ-painopp-row{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.occ-painopp-pain{padding:1.75rem;background:#3d3d3d}
+.occ-painopp-label{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.5rem}
+.occ-painopp-pain-title{font-size:.88rem;font-weight:500;color:#fff;margin-bottom:.6rem;line-height:1.45}
+.occ-painopp-pain-desc{font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.6}
+.occ-painopp-opp{padding:1.75rem;background:#fff;border-left:1px solid var(--border)}
+.occ-painopp-opp-label{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:#C9A84C;margin-bottom:.5rem}
+.occ-painopp-opp-title{font-size:.88rem;font-weight:500;color:var(--fg);margin-bottom:.6rem;line-height:1.45}
+.occ-painopp-opp-desc{font-size:.8rem;color:var(--muted);line-height:1.6}
+.occ-painopp-hmw{font-size:.78rem;color:#C9A84C;margin-top:.75rem;font-style:italic;line-height:1.5}
+@media(max-width:768px){.occ-painopp-panel{padding:2.5rem 1.5rem}.occ-painopp-row{grid-template-columns:1fr}.occ-painopp-opp{border-left:none;border-top:1px solid var(--border)}}
 .opp-top{max-width:760px;margin-bottom:3rem}
 .opp-eyebrow{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:#C9A84C;margin-bottom:1.2rem}
 .opp-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:300;line-height:1.1;color:#fff;letter-spacing:-.02em;margin-bottom:1.5rem}
@@ -361,7 +398,7 @@ document.addEventListener('DOMContentLoaded',function(){
 <div class="section-header" id="hardware-design"><span class="section-num">01</span><h2 class="section-title">Hardware Design</h2></div>
 <div class="project-card" id="card-0">
 <div class="card-trigger" onclick="toggleCard(0)">
-<div class="card-bg"><img src="images/wf_8.png" alt="Wayfarer"></div>
+<div class="card-bg"><img src="images/wf_title.png" alt="Wayfarer"></div>
 <div class="card-overlay"></div>
 <div class="card-trigger-info"><div class="card-top"><span class="card-num">Project 01 &nbsp;/&nbsp; 2025</span><h3 class="card-name">Wayfarer</h3><span class="card-type"><span>Kitchen</span><span>Induction</span><span>Portable</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
 </div>
@@ -380,6 +417,8 @@ document.addEventListener('DOMContentLoaded',function(){
 <div class="gal-full"><img src="images/wf_3.png" loading="lazy"></div>
 <div class="gal-full onyx-spacer" style="height:6rem;background:#ffffff"></div>
 <div class="gal-full"><img src="images/wf_4.png" loading="lazy"></div>
+<div class="gal-full onyx-spacer" style="height:6rem;background:#ffffff"></div>
+<div class="gal-full"><img src="images/wf_knob.png" loading="lazy"></div>
 <div class="gal-full onyx-spacer" style="height:6rem;background:#ffffff"></div>
 <div class="gal-full"><img src="images/wf_5.png" loading="lazy"></div>
 <div class="gal-full"><img src="images/wf_6.png" loading="lazy"></div>
@@ -510,19 +549,74 @@ document.addEventListener('DOMContentLoaded',function(){
 <div class="card-trigger" onclick="toggleCard(4)">
 <div class="card-bg"><img src="images/img_34.jpg" alt="Occupate"></div>
 <div class="card-overlay"></div>
-<div class="card-trigger-info"><div class="card-top"><span class="card-num">Project 05 &nbsp;/&nbsp; 2023</span><h3 class="card-name">Occupate</h3><span class="card-type"><span>Hardware</span><span>UI/UX</span><span>Campus Design</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
+<div class="card-trigger-info"><div class="card-top"><span class="card-num">Project 05 &nbsp;/&nbsp; 2023</span><h3 class="card-name">Occupate</h3><span class="card-type"><span>Safety Systems</span><span>IoT</span><span>Occupancy Monitoring</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
 </div>
 <div class="project-panel">
-<div class="panel-header"><div class="panel-title-block"><span class="panel-subtitle">Hardware &nbsp;&middot;&nbsp; UI/UX &nbsp;&middot;&nbsp; 3 Weeks &nbsp;&middot;&nbsp; 2023</span><h2 class="panel-title">Occupate</h2></div><button class="panel-close" onclick="toggleCard(4);event.stopPropagation()">&#x2715;</button></div>
-<div class="panel-caption"><div class="panel-desc">Occupate is a live occupancy mapping system for university study areas.</div><div class="panel-specs"><div class="spec"><span class="spec-label">Category</span><span class="spec-value">Hardware &amp; UI/UX</span></div>
-<div class="spec"><span class="spec-label">Focus</span><span class="spec-value">Campus Occupancy &amp; Wayfinding</span></div>
+<div class="panel-header"><div class="panel-title-block"><span class="panel-subtitle">Safety Systems &nbsp;&middot;&nbsp; IoT &nbsp;&middot;&nbsp; UI/UX &nbsp;&middot;&nbsp; 2023</span><h2 class="panel-title">Occupate</h2></div><button class="panel-close" onclick="toggleCard(4);event.stopPropagation()">&#x2715;</button></div>
+<div class="panel-caption"><div class="panel-desc">Occupate is a real-time occupancy monitoring system designed to prevent overcrowding, improve fire safety compliance, and help people find available space — from university buildings to warehouses and event venues.</div><div class="panel-specs"><div class="spec"><span class="spec-label">Category</span><span class="spec-value">Safety Systems &amp; IoT</span></div>
+<div class="spec"><span class="spec-label">Focus</span><span class="spec-value">Overcrowding Prevention &amp; Fire Safety</span></div>
 <div class="spec"><span class="spec-label">Duration</span><span class="spec-value">3 Weeks</span></div>
 <div class="spec"><span class="spec-label">Year</span><span class="spec-value">2023</span></div>
 <div class="spec"><span class="spec-label">Methods</span><span class="spec-value">User Research &middot; Concept Ideation &middot; Scale Modeling &middot; UI Design</span></div>
 </div></div>
 <div class="panel-body"><div class="gal"><div class="gal-full"><img src="images/img_35.jpg" loading="lazy"></div>
-<div class="gal-full"><div class="occ-problem-panel"><div class="opp-top"><div class="opp-eyebrow">The Problem</div><h3 class="opp-headline">Finding a seat shouldn't take longer than the study session itself.</h3><p class="opp-body">University libraries and common spaces are packed with students — but with no real-time visibility into where seats are open, finding the right spot becomes a frustrating loop of floor-to-floor wandering. Most students spent up to <strong>30 minutes</strong> locating an ideal study space.</p></div><div class="opp-stats"><div class="opp-stat-card"><div class="opp-stat-icon"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#C9A84C" stroke-width="2"/><path d="M28 14 L28 28 L38 34" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="28" cy="28" r="2" fill="#C9A84C"/></svg></div><div class="opp-stat-num">30<span class="opp-stat-unit">min</span></div><div class="opp-stat-label">avg. time students spend searching for an ideal study spot</div></div><div class="opp-stat-card opp-stat-card--accent"><div class="opp-stat-icon"><svg viewBox="0 0 56 56" fill="none"><path d="M14 42 L14 24 L28 14 L42 24 L42 42 Z" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linejoin="round"/><rect x="22" y="30" width="12" height="12" rx="1" stroke="rgba(255,255,255,0.7)" stroke-width="2"/><circle cx="28" cy="22" r="3" stroke="rgba(255,255,255,0.7)" stroke-width="2"/></svg></div><div class="opp-stat-num">70<span class="opp-stat-unit">%</span></div><div class="opp-stat-label">of interviewees saw clear value in a live campus occupancy map</div></div><div class="opp-stat-card"><div class="opp-stat-icon"><svg viewBox="0 0 56 56" fill="none"><rect x="10" y="16" width="36" height="26" rx="3" stroke="#C9A84C" stroke-width="2"/><path d="M18 28 L22 32 L30 22 L38 28" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="opp-stat-num">0</div><div class="opp-stat-label">existing physical systems providing real-time campus seat visibility</div></div></div><div class="opp-needs"><div class="opp-need"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#C9A84C" stroke-width="1.5"/><path d="M7 10 L9 12 L13 8" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Noise level awareness</span></div><div class="opp-need"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#C9A84C" stroke-width="1.5"/><path d="M7 10 L9 12 L13 8" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Proximity to other students</span></div><div class="opp-need"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#C9A84C" stroke-width="1.5"/><path d="M7 10 L9 12 L13 8" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Floor-level filtering</span></div><div class="opp-need"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#C9A84C" stroke-width="1.5"/><path d="M7 10 L9 12 L13 8" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Study room booking</span></div><div class="opp-need"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#C9A84C" stroke-width="1.5"/><path d="M7 10 L9 12 L13 8" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Foot traffic patterns</span></div></div></div></div><div class="gal-full"><img src="images/img_36.jpg" loading="lazy"></div>
-<div class="gal-full"><img src="images/img_37.jpg" loading="lazy"></div>
+<div class="gal-full"><div class="occ-problem-panel" style="background:#fff">
+<div class="opp-top"><div class="opp-eyebrow" style="color:#C9A84C">The Problem</div>
+<h3 class="opp-headline" style="color:var(--fg)">Overcrowding isn't just inconvenient.<br>It's a safety crisis.</h3>
+<p class="opp-body" style="color:var(--muted)">From campus buildings to warehouses and concert venues, exceeding safe occupancy limits puts lives at risk — and most spaces have <strong style="color:#C9A84C">no way to monitor or prevent it in real time.</strong> Students waste up to 30 minutes searching for open seats, but the deeper issue is that no one knows when a building has exceeded its safe capacity.</p>
+</div>
+<div class="opp-stats">
+<div class="opp-stat-card" style="background:rgba(0,0,0,.03);border-color:var(--border)"><div class="opp-stat-icon"><svg viewBox="0 0 56 56" fill="none"><path d="M28 8 L8 48 L48 48 Z" stroke="#C9A84C" stroke-width="2" stroke-linejoin="round"/><path d="M28 22 L28 34" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"/><circle cx="28" cy="40" r="2" fill="#C9A84C"/></svg></div><div class="opp-stat-num" style="color:var(--fg)">82<span class="opp-stat-unit">%</span></div><div class="opp-stat-label" style="color:var(--muted)">of fire code violations involve exceeding posted maximum occupancy limits</div></div>
+<div class="opp-stat-card" style="background:rgba(201,168,76,.06);border-color:rgba(201,168,76,.2)"><div class="opp-stat-icon"><svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="20" stroke="#C9A84C" stroke-width="2"/><path d="M28 14 L28 28 L38 34" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="opp-stat-num" style="color:#C9A84C">40<span class="opp-stat-unit">%</span></div><div class="opp-stat-label" style="color:var(--muted)">longer evacuation times when buildings exceed maximum occupancy thresholds</div></div>
+<div class="opp-stat-card" style="background:rgba(0,0,0,.03);border-color:var(--border)"><div class="opp-stat-icon"><svg viewBox="0 0 56 56" fill="none"><rect x="10" y="16" width="36" height="26" rx="3" stroke="#C9A84C" stroke-width="2"/><path d="M18 28 L22 32 L30 22 L38 28" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="opp-stat-num" style="color:var(--fg)">0</div><div class="opp-stat-label" style="color:var(--muted)">existing systems providing real-time occupancy visibility across mixed-use spaces</div></div>
+</div>
+</div></div>
+<div class="gal-full"><div class="occ-safety-infographic">
+<div class="occ-safety-split">
+<div class="occ-safety-text">
+<div class="occ-safety-eyebrow">Why It Matters</div>
+<h3 class="occ-safety-title">The cost of not knowing<br>who's inside.</h3>
+<p class="occ-safety-sub">Overcrowding kills. Whether it's a packed concert venue, a university stairwell during a fire drill, or a warehouse floor during peak shift — when occupancy exceeds safe limits, evacuation slows, panic spreads, and people get hurt. Most buildings have a posted max occupancy, but almost none have a way to enforce it in real time.</p>
+<div class="occ-safety-stats-inline">
+<div class="occ-safety-stat-inline occ-safety-stat--accent">
+<div class="occ-safety-stat-num">2,400+</div>
+<div class="occ-safety-stat-label">crowd crush fatalities worldwide in the last decade</div>
+</div>
+<div class="occ-safety-stat-inline">
+<div class="occ-safety-stat-num">5,190</div>
+<div class="occ-safety-stat-label">OSHA-reported warehouse injuries per year from overcrowded spaces</div>
+</div>
+</div>
+<div class="occ-safety-callouts">
+<div class="occ-safety-callout"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#C9A84C" stroke-width="1.5"/><path d="M7 10 L9 12 L13 8" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Real-time threshold alerts when capacity nears limits</span></div>
+<div class="occ-safety-callout"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#C9A84C" stroke-width="1.5"/><path d="M7 10 L9 12 L13 8" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Floor-by-floor density mapping for evacuation planning</span></div>
+<div class="occ-safety-callout"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#C9A84C" stroke-width="1.5"/><path d="M7 10 L9 12 L13 8" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Scalable across campuses, warehouses, and event venues</span></div>
+</div>
+</div>
+<div class="occ-safety-image">
+<img src="images/occupate_iso.png" alt="Isometric building floorplans showing occupancy levels">
+</div>
+</div>
+</div></div><div class="gal-full"><div class="occ-painopp-panel">
+<div class="occ-painopp-header">
+<div class="occ-painopp-eyebrow">Pain points &amp; opportunities</div>
+<h3 class="occ-painopp-title">Three core problems.<br>Three design opportunities.</h3>
+</div>
+<div class="occ-painopp-rows">
+<div class="occ-painopp-row">
+<div class="occ-painopp-pain"><p class="occ-painopp-label">Pain Point 01</p><p class="occ-painopp-pain-title">No way to know when a space has exceeded safe capacity</p><p class="occ-painopp-pain-desc">Building managers rely on manual headcounts or visual estimates. By the time a floor is dangerously full, it&#8217;s already a fire code violation.</p></div>
+<div class="occ-painopp-opp"><p class="occ-painopp-opp-label">Opportunity</p><p class="occ-painopp-opp-title">Real-time density mapping per floor</p><p class="occ-painopp-opp-desc">Show the number of people at a particular part of a floor or multiple floors &#8212; making dangerous crowding visible before it becomes critical.</p><p class="occ-painopp-hmw">HMW display high-density areas visually so managers can act before thresholds are crossed?</p></div>
+</div>
+<div class="occ-painopp-row">
+<div class="occ-painopp-pain"><p class="occ-painopp-label">Pain Point 02</p><p class="occ-painopp-pain-title">Foot traffic patterns are invisible and unpredictable</p><p class="occ-painopp-pain-desc">Density varies throughout the day and week. Without data, facility managers can&#8217;t anticipate bottlenecks or plan evacuation routes effectively.</p></div>
+<div class="occ-painopp-opp"><p class="occ-painopp-opp-label">Opportunity</p><p class="occ-painopp-opp-title">Visualize foot traffic over time</p><p class="occ-painopp-opp-desc">Track and display foot traffic and occupancy density throughout the day and week &#8212; making it easier to plan study times, shifts, or event capacity.</p><p class="occ-painopp-hmw">HMW sort foot traffic visually through time instead of space?</p></div>
+</div>
+<div class="occ-painopp-row">
+<div class="occ-painopp-pain"><p class="occ-painopp-label">Pain Point 03</p><p class="occ-painopp-pain-title">No filtering to find the right kind of space</p><p class="occ-painopp-pain-desc">Users can&#8217;t easily determine needs for an ideal spot &#8212; desk size, outlet access, noise level, proximity to exits. No system supports this kind of granular wayfinding.</p></div>
+<div class="occ-painopp-opp"><p class="occ-painopp-opp-label">Opportunity</p><p class="occ-painopp-opp-title">Smart filtering by amenity and environment</p><p class="occ-painopp-opp-desc">Let users filter available spots by criteria they care about &#8212; bathrooms, vending, desk size, noise, exits &#8212; so they can find the right space without wandering.</p><p class="occ-painopp-hmw">HMW allow users to generate criteria for their ideal spot and filter out what doesn&#8217;t matter?</p></div>
+</div>
+</div>
+</div></div>
 <div class="gal-full"><img src="images/img_38.jpg" loading="lazy"></div>
 <div class="gal-full"><img src="images/img_39.jpg" loading="lazy"></div>
 <div class="gal-full"><img src="images/img_40.jpg" loading="lazy"></div>
@@ -575,13 +669,24 @@ function getVisibleOpenCard(){var cards=document.querySelectorAll('.project-card
 function updateVisibleCard(){var btn=document.getElementById('stickyClose');var openCards=document.querySelectorAll('.project-card.open');if(openCards.length===0){visibleCard=null;if(btn)hidePill(btn);return;}var best=getVisibleOpenCard();if(!best)return;var newIdx=parseInt(best.id.replace('card-',''),10);if(newIdx===visibleCard&&btn&&btn.classList.contains('visible')){updateStickyPos();return;}visibleCard=newIdx;if(btn){btn.style.position='fixed';btn.style.top='auto';btn.style.bottom='2rem';btn.style.right='2rem';showPill(btn);}}
 function hideStickyClose(){var btn=document.getElementById('stickyClose');if(btn)hidePill(btn);}
 function updateStickyPos(){if(visibleCard===null)return;var btn=document.getElementById('stickyClose');if(!btn||!btn.classList.contains('visible'))return;var card=document.getElementById('card-'+visibleCard);if(!card)return;var panel=card.querySelector('.project-panel');var panelRect=panel.getBoundingClientRect();var btnH=btn.offsetHeight;var gap=32;if(panelRect.bottom<(window.innerHeight-gap-btnH)){var topPx=card.offsetTop+panel.offsetTop+panel.offsetHeight-btnH-gap;btn.style.position='absolute';btn.style.top=topPx+'px';btn.style.bottom='auto';btn.style.right='2rem';}else{btn.style.position='fixed';btn.style.top='auto';btn.style.bottom='2rem';btn.style.right='2rem';}}
-window.addEventListener('scroll',function(){updateVisibleCard();updateStickyPos();});</script><script>
-</script>
+window.addEventListener('scroll',function(){updateVisibleCard();updateStickyPos();});</script>
 <script>
 (function(){
   var reel=document.getElementById('mastReel');
   var reelImg=document.getElementById('reelImg');
   if(!reel||!reelImg)return;
+
+  // Only play reel once per session
+  if(sessionStorage.getItem('reelPlayed')){
+    reelImg.style.backgroundImage='url(images/img_01.jpg)';
+    reelImg.style.transform='scaleX(-1)';
+    reelImg.style.backgroundPosition='30% center';
+    reelImg.style.backgroundSize='cover';
+    reel.style.opacity='1';
+    reel.style.animation='none';
+    return;
+  }
+  sessionStorage.setItem('reelPlayed','1');
 
   // Image sequence grouped: research → sketches → CAD/form → renders → hero
   var images=[
@@ -606,7 +711,7 @@ window.addEventListener('scroll',function(){updateVisibleCard();updateStickyPos(
     'images/img_20.jpg',
     'images/wf_7.png',
     'images/img_07.jpg',
-    'images/img_airbrace_lifestyle.png',
+    'images/wf_8.png',
     'images/img_24.jpg',
     // Hero (final)
     'images/img_01.jpg'
@@ -639,6 +744,11 @@ window.addEventListener('scroll',function(){updateVisibleCard();updateStickyPos(
       reelImg.style.transform='scaleX(-1)';
       reelImg.style.backgroundPosition='30% center';
       reelImg.style.backgroundSize='cover';
+    } else if(images[idx].indexOf('wf_8')!==-1){
+      reelImg.style.transform='none';
+      reelImg.style.backgroundPosition='35% center';
+      reelImg.style.backgroundSize='cover';
+      reelImg.style.backgroundColor='transparent';
     } else {
       reelImg.style.transform='none';
       reelImg.style.backgroundPosition='center';
@@ -666,6 +776,13 @@ window.addEventListener('scroll',function(){updateVisibleCard();updateStickyPos(
   var loaderText = document.getElementById('mobLoaderText');
   if(!splash || !splashImg) return;
 
+  // Only play reel once per session
+  if(sessionStorage.getItem('reelPlayed')){
+    splash.style.display = 'none';
+    return;
+  }
+  sessionStorage.setItem('reelPlayed','1');
+
   // Hide masthead content initially, we'll reveal it after splash
   var mastContent = document.querySelector('.mast-content');
   if(mastContent) mastContent.style.opacity = '0';
@@ -690,7 +807,7 @@ window.addEventListener('scroll',function(){updateVisibleCard();updateStickyPos(
     'images/img_20.jpg',
     'images/wf_7.png',
     'images/img_07.jpg',
-    'images/img_airbrace_lifestyle.png',
+    'images/wf_8.png',
     'images/img_24.jpg',
     // Final (Occupate hero)
     'images/img_34.jpg'
@@ -750,6 +867,10 @@ window.addEventListener('scroll',function(){updateVisibleCard();updateStickyPos(
     splashImg.style.transform = 'none';
     // Center on subject for last image (Occupate - subject is left of center)
     if(idx === total-1){
+      splashImg.style.backgroundPosition = '35% center';
+      splashImg.style.backgroundSize = 'cover';
+      splashImg.style.backgroundColor = 'transparent';
+    } else if(images[idx].indexOf('wf_8') !== -1){
       splashImg.style.backgroundPosition = '35% center';
       splashImg.style.backgroundSize = 'cover';
       splashImg.style.backgroundColor = 'transparent';
