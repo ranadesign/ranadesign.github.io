@@ -103,26 +103,39 @@ nav.scrolled::before{opacity:.96;border-bottom-color:var(--border)}
 .marquee-inner span{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--muted)}
 .marquee-inner .dot{font-style:normal;color:var(--accent)}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.work-section{padding:6rem 3rem}
-.section-header{display:flex;align-items:baseline;gap:1.5rem;margin-bottom:2rem;scroll-margin-top:5rem}
-.section-num{font-size:.7rem;color:var(--accent);letter-spacing:.1em}
-.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,4rem);font-weight:300;letter-spacing:-.01em}
-.project-card{border:1px solid var(--border);margin-bottom:1.5rem;overflow:hidden;background:var(--card-bg);transition:box-shadow .4s ease}
+.work-section{padding:4rem 0 0}
+.section-header{display:none}
+.section-header#hardware-uiux{display:flex;align-items:center;gap:1.5rem;padding:2.5rem 3rem;margin:0;position:relative;scroll-margin-top:5rem;background:var(--bg)}
+.section-divider-label{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);white-space:nowrap;flex-shrink:0}
+.section-divider-line{flex:1;height:1px;background:var(--border)}
+.section-header#hardware-design{scroll-margin-top:5rem}
+.section-header.section-header--visible{display:flex;align-items:center;gap:1.5rem;padding:2.5rem 3rem;margin:0;background:var(--bg)}
+.project-card{border-top:1px solid var(--border);margin-bottom:0;overflow:hidden;background:var(--card-bg);transition:box-shadow .4s ease}
 .project-card:not(.open):hover{box-shadow:0 20px 60px rgba(0,0,0,.1)}
-.card-trigger{position:relative;cursor:pointer;overflow:hidden;height:420px}
-.card-bg{position:absolute;inset:0;z-index:0}
+.card-trigger{position:relative;cursor:pointer;overflow:hidden;display:grid;grid-template-columns:1.4fr 1fr;height:420px}
+.card-bg{position:relative;overflow:hidden}
 .card-bg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s cubic-bezier(.25,.46,.45,.94)}
 .card-trigger:hover .card-bg img{transform:scale(1.03)}
-.card-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(to left,rgba(20,18,14,.88) 0%,rgba(20,18,14,.65) 35%,rgba(20,18,14,.15) 70%,rgba(20,18,14,0) 100%)}
-.card-trigger-info{position:absolute;top:0;right:0;z-index:2;padding:2.5rem 3rem;display:flex;flex-direction:column;align-items:flex-end;gap:.75rem;max-width:520px;text-align:right}
-.card-top{display:flex;flex-direction:column;gap:.5rem;align-items:flex-end;text-align:right;width:100%}
-.card-num{font-size:.65rem;letter-spacing:.14em;color:rgba(255,255,255,.55)}
-.card-name{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:800;line-height:1;letter-spacing:-.02em;color:#fff;text-shadow:0 2px 16px rgba(0,0,0,.3)}
-.card-type{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7)}
-.card-cta{display:inline-flex;align-items:center;gap:.75rem;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;padding:.6rem 1.4rem;border:1px solid rgba(255,255,255,.45);border-radius:999px;transition:all .3s;margin-top:.25rem;background:rgba(255,255,255,.08);backdrop-filter:blur(4px)}
+.card-overlay{display:none}
+.card-trigger-info{position:relative;z-index:2;padding:3.5rem 3rem;display:flex;flex-direction:column;justify-content:center;gap:.75rem;background:var(--bg)}
+.card-top{display:flex;flex-direction:column;gap:.5rem;align-items:flex-start;text-align:left;width:100%}
+.card-category{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:.75rem;margin-bottom:.25rem}
+.card-category::before{content:'';width:1.5rem;height:1px;background:var(--accent)}
+.card-num{font-size:.65rem;letter-spacing:.14em;color:var(--muted)}
+.card-name{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,2.5vw,2.4rem);font-weight:300;line-height:1.1;letter-spacing:-.02em;color:var(--fg)}
+.card-name em{font-style:italic;color:var(--accent)}
+.card-desc{font-size:.85rem;line-height:1.85;color:var(--muted);max-width:420px;margin:.5rem 0}
+.card-type{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:flex;flex-wrap:wrap;gap:.3rem .5rem}
+.card-type span:not(:last-child)::after{content:'\2022';opacity:.9;margin-left:.45rem;font-size:1.1em;font-weight:700;color:var(--fg)}
+.card-meta{display:flex;flex-direction:column;gap:.4rem;margin-top:.75rem}
+.card-meta-item{font-size:.72rem;color:var(--muted);display:flex;gap:.5rem}
+.card-meta-label{letter-spacing:.1em;text-transform:uppercase;color:var(--fg);font-weight:400;min-width:70px}
+.card-cta{display:inline-flex;align-items:center;gap:.75rem;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--fg);padding:.6rem 1.4rem;border:1px solid var(--border);border-radius:999px;transition:all .3s;margin-top:1rem;background:transparent;align-self:flex-start}
 .card-cta .arrow{display:inline-block;transition:transform .3s}
-.card-trigger:hover .card-cta{border-color:#fff;background:rgba(255,255,255,.18)}
+.card-trigger:hover .card-cta{border-color:var(--accent);color:var(--accent)}
 .card-trigger:hover .card-cta .arrow{transform:translateX(4px)}
+.project-card.card-flip .card-trigger{direction:rtl}
+.project-card.card-flip .card-trigger > *{direction:ltr}
 .project-panel{max-height:0;overflow:hidden;transition:max-height 1.4s cubic-bezier(.16,1,.3,1)}
 .project-card.open .project-panel{max-height:20000px;border-top:1px solid var(--border)}
 .panel-header{padding:3rem 3rem 2rem;display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--border)}
@@ -244,6 +257,20 @@ nav.scrolled::before{opacity:.96;border-bottom-color:var(--border)}
 .si-chevron::before,.si-chevron::after{content:'';position:absolute;width:7px;height:7px;border-right:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(45deg);animation:chevronBounce 1.2s ease-in-out infinite}
 .si-chevron::after{animation-delay:.25s;top:5px}
 @keyframes chevronBounce{0%,100%{opacity:.25;transform:rotate(45deg) translate(-1px,-1px)}50%{opacity:1;transform:rotate(45deg) translate(2px,2px)}}
+/* Animation Showcase */
+.anim-showcase{border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:grid;grid-template-columns:1.4fr 1fr;min-height:500px;overflow:hidden}
+.anim-video{position:relative;overflow:hidden;background:#0a0a0a;display:flex;align-items:center;justify-content:center}
+.anim-video video{width:100%;height:100%;object-fit:cover;display:block}
+.anim-text{padding:4rem 3.5rem;display:flex;flex-direction:column;justify-content:center;background:var(--bg)}
+.anim-eyebrow{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem;display:flex;align-items:center;gap:.75rem}
+.anim-eyebrow::before{content:'';width:1.5rem;height:1px;background:var(--accent)}
+.anim-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,2.5vw,2.4rem);font-weight:300;line-height:1.1;letter-spacing:-.02em;color:var(--fg);margin-bottom:1.25rem}
+.anim-title em{font-style:italic;color:var(--accent)}
+.anim-desc{font-size:.85rem;line-height:1.85;color:var(--muted);margin-bottom:1.5rem;max-width:420px}
+.anim-meta{display:flex;flex-direction:column;gap:.4rem}
+.anim-meta-item{font-size:.72rem;color:var(--muted);display:flex;gap:.5rem}
+.anim-meta-label{letter-spacing:.1em;text-transform:uppercase;color:var(--fg);font-weight:400;min-width:70px}
+@media(max-width:768px){.anim-showcase{grid-template-columns:1fr}.anim-text{padding:2.5rem 1.5rem}}
 .contact-section{border-top:1px solid var(--border);padding:6rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
 .contact-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:300;line-height:1.05;letter-spacing:-.02em}
 .contact-headline em{font-style:italic;color:var(--accent)}
@@ -326,11 +353,16 @@ footer{flex-direction:column;gap:.5rem;text-align:center}}
 
 .card-type{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:.3rem .5rem}
 .card-type span{white-space:nowrap}
-.card-type span:not(:last-child)::after{content:'\2022';opacity:.9;margin-left:.45rem;font-size:1.1em;font-weight:700}
+.card-type span:not(:last-child)::after{content:'\2022';opacity:.9;margin-left:.45rem;font-size:1.1em;font-weight:700;color:var(--fg)}
 @media(max-width:768px){
-.card-type{flex-direction:column;align-items:flex-end;gap:.35rem}
-.card-type span:not(:last-child)::after{content:'';display:block;width:20px;height:1px;background:rgba(255,255,255,.75);margin:.35rem 0 .35rem auto}
-.card-trigger-info{padding:1.5rem}
+.card-type{flex-direction:row;flex-wrap:wrap;align-items:flex-start;gap:.3rem .5rem}
+.card-type span:not(:last-child)::after{content:'\2022';display:inline;width:auto;height:auto;background:none;margin:0 0 0 .45rem;font-size:1.1em;font-weight:700;color:var(--fg)}
+.card-trigger{grid-template-columns:1fr;min-height:auto}
+.card-trigger-info{padding:2rem 1.5rem}
+.card-bg{min-height:280px}
+.section-header#hardware-uiux{padding:2rem 1.5rem}
+.section-divider-label{font-size:.58rem}
+.section-header.section-header--visible{padding:2rem 1.5rem}
 }
 
 .air-opp-panel{display:grid;grid-template-columns:1fr 1fr;background:#ffffff;font-family:'Mundial','Helvetica Neue',Helvetica,Arial,sans-serif}
@@ -408,8 +440,7 @@ document.addEventListener('DOMContentLoaded',function(){
 <div class="project-card" id="card-0">
 <div class="card-trigger" onclick="toggleCard(0)">
 <div class="card-bg"><img src="images/wf_title.png" alt="Wayfarer"></div>
-<div class="card-overlay"></div>
-<div class="card-trigger-info"><div class="card-top"><span class="card-num">Project 01 &nbsp;/&nbsp; 2025</span><h3 class="card-name">Wayfarer</h3><span class="card-type"><span>Kitchen</span><span>Induction</span><span>Portable</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
+<div class="card-trigger-info"><div class="card-top"><span class="card-category">Hardware Design</span><span class="card-num">Project 01 &nbsp;/&nbsp; 2025</span><h3 class="card-name">Wayfarer</h3><p class="card-desc">A portable induction cooktop burner designed for FlexiSpot, featuring a low-profile form factor with an intuitive knurled aluminum knob and backlit touch controls.</p><span class="card-type"><span>Kitchen</span><span>Induction</span><span>Portable</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
 </div>
 <div class="project-panel">
 <div class="panel-header"><div class="panel-title-block"><span class="panel-subtitle">Kitchen &nbsp;&middot;&nbsp; Product Design &nbsp;&middot;&nbsp; 3 Weeks &nbsp;&middot;&nbsp; 2025</span><h2 class="panel-title">Wayfarer</h2></div><button class="panel-close" onclick="toggleCard(0);event.stopPropagation()">&#x2715;</button></div>
@@ -438,8 +469,7 @@ document.addEventListener('DOMContentLoaded',function(){
 <div class="project-card" id="card-1">
 <div class="card-trigger" onclick="toggleCard(1)">
 <div class="card-bg"><img src="images/img_01.jpg" alt="Onyx Chair"></div>
-<div class="card-overlay"></div>
-<div class="card-trigger-info"><div class="card-top"><span class="card-num">Project 02 &nbsp;/&nbsp; 2026</span><h3 class="card-name">Onyx Chair</h3><span class="card-type"><span>Furniture</span><span>Ergonomics</span><span>Office Chair</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
+<div class="card-trigger-info"><div class="card-top"><span class="card-category">Hardware Design</span><span class="card-num">Project 02 &nbsp;/&nbsp; 2026</span><h3 class="card-name">Onyx Chair</h3><p class="card-desc">An office chair with motorized lumbar support, conceived through an intensive 8-week design sprint at Georgia Tech.</p><span class="card-type"><span>Furniture</span><span>Ergonomics</span><span>Office Chair</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
 </div>
 <div class="project-panel">
 <div class="panel-header"><div class="panel-title-block"><span class="panel-subtitle">Furniture &nbsp;&middot;&nbsp; Ergonomics &nbsp;&middot;&nbsp; 8 Weeks &nbsp;&middot;&nbsp; 2026</span><h2 class="panel-title">Onyx Chair</h2></div><button class="panel-close" onclick="toggleCard(1);event.stopPropagation()">&#x2715;</button></div>
@@ -488,8 +518,7 @@ document.addEventListener('DOMContentLoaded',function(){
 <div class="project-card" id="card-2">
 <div class="card-trigger" onclick="toggleCard(2)">
 <div class="card-bg"><img src="images/img_12.jpg" alt="AirBrace"></div>
-<div class="card-overlay"></div>
-<div class="card-trigger-info"><div class="card-top"><span class="card-num">Project 03 &nbsp;/&nbsp; 2023</span><h3 class="card-name">AirBrace</h3><span class="card-type"><span>Medical Device</span><span>Wearable</span><span>Rehabilitation</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
+<div class="card-trigger-info"><div class="card-top"><span class="card-category">Hardware Design</span><span class="card-num">Project 03 &nbsp;/&nbsp; 2023</span><h3 class="card-name">AirBrace</h3><p class="card-desc">An air-circulating leg brace designed for post-surgical rehabilitation, rethinking a form factor that hasn’t changed in decades.</p><span class="card-type"><span>Medical Device</span><span>Wearable</span><span>Rehabilitation</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
 </div>
 <div class="project-panel">
 <div class="panel-header"><div class="panel-title-block"><span class="panel-subtitle">Medical Device &nbsp;&middot;&nbsp; Wearable &nbsp;&middot;&nbsp; 8 Weeks &nbsp;&middot;&nbsp; 2023</span><h2 class="panel-title">AirBrace</h2></div><button class="panel-close" onclick="toggleCard(2);event.stopPropagation()">&#x2715;</button></div>
@@ -530,12 +559,11 @@ document.addEventListener('DOMContentLoaded',function(){
 <div class="gal-full"><img src="images/img_25.jpg" loading="lazy"></div>
 </div></div>
 </div></div>
-<div class="section-header" id="hardware-uiux" style="margin-top:2rem"><span class="section-num">02</span><h2 class="section-title">Hardware + UI/UX</h2></div>
-<div class="project-card" id="card-3">
+<div class="section-header" id="hardware-uiux"><div class="section-divider-line"></div><span class="section-divider-label">Hardware + UI/UX</span></div>
+<div class="project-card card-flip" id="card-3">
 <div class="card-trigger" onclick="toggleCard(3)">
-<div class="card-bg"><img src="images/img_26.jpg" alt="Lifewoven"></div>
-<div class="card-overlay"></div>
-<div class="card-trigger-info"><div class="card-top"><span class="card-num">Project 04 &nbsp;/&nbsp; 2024</span><h3 class="card-name">Lifewoven</h3><span class="card-type"><span>Transportation</span><span>Healthcare</span><span>Systems Design</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
+<div class="card-bg"><img src="images/img_33.jpg" alt="Lifewoven" style="object-position:center 65%"></div>
+<div class="card-trigger-info"><div class="card-top"><span class="card-category">Hardware + UI/UX</span><span class="card-num">Project 04 &nbsp;/&nbsp; 2024</span><h3 class="card-name">Lifewoven</h3><p class="card-desc">A mobile medical checkup vehicle designed to bring healthcare assessments and medication to people with debilitating chronic conditions.</p><span class="card-type"><span>Transportation</span><span>Healthcare</span><span>Systems Design</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
 </div>
 <div class="project-panel">
 <div class="panel-header"><div class="panel-title-block"><span class="panel-subtitle">Transportation &nbsp;&middot;&nbsp; Healthcare &nbsp;&middot;&nbsp; Systems Design &nbsp;&middot;&nbsp; 2024</span><h2 class="panel-title">Lifewoven</h2></div><button class="panel-close" onclick="toggleCard(3);event.stopPropagation()">&#x2715;</button></div>
@@ -554,11 +582,10 @@ document.addEventListener('DOMContentLoaded',function(){
 <div class="gal-full"><img src="images/img_33.jpg" loading="lazy"></div>
 </div></div>
 </div></div>
-<div class="project-card" id="card-4">
+<div class="project-card card-flip" id="card-4">
 <div class="card-trigger" onclick="toggleCard(4)">
 <div class="card-bg"><img src="images/img_34.jpg" alt="Occupate"></div>
-<div class="card-overlay"></div>
-<div class="card-trigger-info"><div class="card-top"><span class="card-num">Project 05 &nbsp;/&nbsp; 2023</span><h3 class="card-name">Occupate</h3><span class="card-type"><span>Safety Systems</span><span>IoT</span><span>Occupancy Monitoring</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
+<div class="card-trigger-info"><div class="card-top"><span class="card-category">Hardware + UI/UX</span><span class="card-num">Project 05 &nbsp;/&nbsp; 2023</span><h3 class="card-name">Occupate</h3><p class="card-desc">A real-time occupancy monitoring system designed to prevent overcrowding, improve fire safety compliance, and help people find available space.</p><span class="card-type"><span>Safety Systems</span><span>IoT</span><span>Occupancy Monitoring</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
 </div>
 <div class="project-panel">
 <div class="panel-header"><div class="panel-title-block"><span class="panel-subtitle">Safety Systems &nbsp;&middot;&nbsp; IoT &nbsp;&middot;&nbsp; UI/UX &nbsp;&middot;&nbsp; 2023</span><h2 class="panel-title">Occupate</h2></div><button class="panel-close" onclick="toggleCard(4);event.stopPropagation()">&#x2715;</button></div>
@@ -639,6 +666,24 @@ document.addEventListener('DOMContentLoaded',function(){
 </div></div>
 </div></div>
 </section>
+<div class="section-header section-header--visible"><span class="section-divider-label">Product Animation</span><div class="section-divider-line"></div></div>
+<div class="anim-showcase">
+<div class="anim-video">
+<video autoplay loop muted playsinline>
+<source src="images/spri_animation.mp4" type="video/mp4">
+</video>
+</div>
+<div class="anim-text">
+<div class="anim-eyebrow">Motion Design</div>
+<h3 class="anim-title">Spri Health<br><em>Check-Up Station</em></h3>
+<p class="anim-desc">A concept animation designed for Spri Health to communicate the vision of a modular medical check-up station — a compact, accessible unit equipped with diagnostic tools to deliver fast, convenient care directly to patients in their communities.</p>
+<div class="anim-meta">
+<div class="anim-meta-item"><span class="anim-meta-label">Role</span><span>Concept Design &amp; Animation</span></div>
+<div class="anim-meta-item"><span class="anim-meta-label">Tools</span><span>Blender &middot; After Effects</span></div>
+<div class="anim-meta-item"><span class="anim-meta-label">Client</span><span>Spri Health</span></div>
+</div>
+</div>
+</div>
 <section class="logos-section">
   <div class="logos-eyebrow">Experience &amp; Collaboration</div>
   <div class="logos-strip">
