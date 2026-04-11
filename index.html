@@ -23,7 +23,7 @@
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="64x64" href="images/favicon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Syne:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=Syne:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>:root{--bg:#F5F2ED;--fg:#1A1814;--accent:#C8502A;--muted:#8A8479;--border:#DDD9D1;--card-bg:#FDFCFA}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}*{cursor:none!important}
 html{scroll-behavior:smooth}
@@ -42,12 +42,12 @@ nav.scrolled::before{opacity:.96;border-bottom-color:var(--border)}
 .nav-links a{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--muted);transition:color .2s}
 .nav-links a:hover{color:var(--fg)}
 .masthead{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 3rem 5rem;position:relative;overflow:hidden}
-.mast-ghost{position:absolute;top:50%;left:-0.04em;transform:translateY(-50%);font-family:'Cormorant Garamond',serif;font-size:clamp(7rem,19vw,21rem);font-weight:300;color:transparent;-webkit-text-stroke:1px var(--border);line-height:1;white-space:nowrap;pointer-events:none;user-select:none;will-change:transform}
+.mast-ghost{position:absolute;top:50%;left:-0.04em;transform:translateY(-50%);font-family:'DM Serif Display',serif;font-size:clamp(7rem,19vw,21rem);font-weight:300;color:transparent;-webkit-text-stroke:1px var(--border);line-height:1;white-space:nowrap;pointer-events:none;user-select:none;will-change:transform}
 .mast-content{position:relative;z-index:2}
 .mast-eyebrow{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem;opacity:0;animation:fadeUp .8s .2s ease forwards}
 .mast-eyebrow::before{content:'';width:2rem;height:1px;background:var(--accent)}
 .mast-name-row{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:2rem}
-.mast-name{font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,10vw,9rem);font-weight:300;line-height:.95;letter-spacing:-.02em;margin-bottom:0;opacity:0;animation:fadeUp .9s .4s ease forwards}
+.mast-name{font-family:'DM Serif Display',serif;font-size:clamp(3.5rem,10vw,9rem);font-weight:300;line-height:.82;letter-spacing:-.02em;margin-bottom:0;opacity:0;animation:fadeUp .9s .4s ease forwards}
 .mast-name em{font-style:italic;color:var(--accent)}
 .mast-reel-btns{position:absolute;right:3rem;bottom:8rem;display:flex;flex-direction:column;gap:.9rem;align-items:flex-end;z-index:10;opacity:0;animation:fadeUp .9s .4s ease forwards}
 .mast-right{display:flex;flex-direction:column;gap:.9rem;align-items:flex-end;flex-shrink:0;padding-bottom:.4rem;opacity:0;animation:fadeUp .9s .4s ease forwards;position:absolute;right:25%;z-index:10;bottom:5rem}
@@ -62,7 +62,7 @@ nav.scrolled::before{opacity:.96;border-bottom-color:var(--border)}
 .mast-svc-btn:hover .btn-arrow{transform:translateX(4px)}
 .mast-bio{max-width:520px;font-size:.85rem;line-height:1.9;color:var(--muted);margin-bottom:2.5rem;opacity:0;animation:fadeUp .9s .6s ease forwards}
 .mast-tags{display:flex;flex-wrap:wrap;gap:.65rem;opacity:0;animation:fadeUp .9s .8s ease forwards}
-.tag{padding:.35rem .9rem;border:1px solid var(--border);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;color:var(--muted);transition:all .25s;cursor:default}
+.tag{padding:.35rem .9rem;border:1px solid var(--border);font-family:'Mundial','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;color:var(--muted);transition:all .25s;cursor:default}
 .tag:hover{border-color:var(--accent);color:var(--accent);background:rgba(200,80,42,.05)}
 .scroll-hint{position:static;display:flex;flex-direction:column;align-items:flex-end;gap:.6rem;opacity:0;animation:fadeUp 1s 1.3s ease forwards;z-index:10;margin-top:1.2rem}
 .scroll-hint .si-chevron{display:flex}
@@ -95,53 +95,86 @@ nav.scrolled::before{opacity:.96;border-bottom-color:var(--border)}
 .scroll-hint-mobile{display:none}
 @keyframes shPulse{0%,100%{transform:scaleY(1);opacity:1}50%{transform:scaleY(.6);opacity:.4}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-.about-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:3.5rem 3rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem}
-.about-label{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
-.about-value{font-family:'Syne',sans-serif;font-size:1rem;font-weight:500;line-height:1.6}
+.about-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:2.5rem 3rem;display:flex;gap:0;align-items:stretch}
+.about-item{flex:1;display:flex;flex-direction:column;gap:.6rem;padding:0 2rem}
+.about-item:first-child{padding-left:0}
+.about-item:last-child{padding-right:0}
+.about-item+.about-item{border-left:1px solid var(--border)}
+.about-label{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:0}
+.about-exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem 2rem}
+.about-value{font-size:.82rem;line-height:1.65;color:var(--fg)}
+.about-value .degree{display:block;margin-bottom:.25rem}
+.about-value .school{color:var(--muted);font-size:.75rem}
+.about-logos{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
+.about-logos span{font-size:.82rem;color:var(--fg)}
+.about-logos .about-dot{color:var(--border);font-size:.5rem}
 .marquee-wrap{overflow:hidden;border-bottom:1px solid var(--border);padding:1rem 0}
 .marquee-inner{display:flex;gap:3rem;animation:marquee 22s linear infinite;white-space:nowrap;width:max-content}
-.marquee-inner span{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--muted)}
+.marquee-inner span{font-family:'Mundial','Helvetica Neue',Helvetica,Arial,sans-serif;font-style:normal;font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
 .marquee-inner .dot{font-style:normal;color:var(--accent)}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .work-section{padding:4rem 0 0}
 .section-header{display:none}
-.section-header#hardware-uiux{display:flex;align-items:center;gap:1.5rem;padding:2.5rem 3rem;margin:0;position:relative;scroll-margin-top:5rem;background:var(--bg)}
-.section-divider-label{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);white-space:nowrap;flex-shrink:0}
-.section-divider-line{flex:1;height:1px;background:var(--border)}
 .section-header#hardware-design{scroll-margin-top:5rem}
-.section-header.section-header--visible{display:flex;align-items:center;gap:1.5rem;padding:2.5rem 3rem;margin:0;background:var(--bg)}
-.project-card{border-top:1px solid var(--border);margin-bottom:0;overflow:hidden;background:var(--card-bg);transition:box-shadow .4s ease}
-.project-card:not(.open):hover{box-shadow:0 20px 60px rgba(0,0,0,.1)}
-.card-trigger{position:relative;cursor:pointer;overflow:hidden;display:grid;grid-template-columns:1.4fr 1fr;height:420px}
-.card-bg{position:relative;overflow:hidden}
-.card-bg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s cubic-bezier(.25,.46,.45,.94)}
-.card-trigger:hover .card-bg img{transform:scale(1.03)}
-.card-overlay{display:none}
-.card-trigger-info{position:relative;z-index:2;padding:2.5rem 3rem;display:flex;flex-direction:column;justify-content:center;gap:.75rem;background:var(--bg)}
-.card-top{display:flex;flex-direction:column;gap:.5rem;align-items:flex-start;text-align:left;width:100%}
-.card-category{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:.75rem;margin-bottom:0}
-.card-category::before{content:'';width:1.5rem;height:1px;background:var(--accent)}
-.card-num{font-size:.65rem;letter-spacing:.14em;color:var(--muted)}
-.card-name{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,2.5vw,2.4rem);font-weight:300;line-height:1.1;letter-spacing:-.02em;color:var(--fg)}
-.card-name em{font-style:italic;color:var(--accent)}
-.card-desc{font-size:.85rem;line-height:1.85;color:var(--muted);max-width:420px;margin:.5rem 0}
-.card-type{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:flex;flex-wrap:wrap;gap:.3rem .5rem}
-.card-type span:not(:last-child)::after{content:'\2022';opacity:.9;margin-left:.45rem;font-size:1.1em;font-weight:700;color:var(--fg)}
-.card-meta{display:flex;flex-direction:column;gap:.4rem;margin-top:.75rem}
-.card-meta-item{font-size:.72rem;color:var(--muted);display:flex;gap:.5rem}
-.card-meta-label{letter-spacing:.1em;text-transform:uppercase;color:var(--fg);font-weight:400;min-width:70px}
-.card-cta{display:inline-flex;align-items:center;gap:.75rem;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--fg);padding:.6rem 1.4rem;border:1px solid var(--border);border-radius:999px;transition:all .3s;margin-top:1rem;background:transparent;align-self:flex-start}
-.card-cta .arrow{display:inline-block;transition:transform .3s}
-.card-trigger:hover .card-cta{border-color:var(--accent);color:var(--accent)}
-.card-trigger:hover .card-cta .arrow{transform:translateX(4px)}
-.project-card.card-flip .card-trigger{direction:rtl}
-.project-card.card-flip .card-trigger > *{direction:ltr}
+.section-header#hardware-uiux{scroll-margin-top:5rem}
+.section-divider-label{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);white-space:nowrap;flex-shrink:0}
+.section-divider-line{flex:1;height:1px;background:var(--border)}
+.section-header.section-header--visible{display:flex;align-items:center;gap:1.5rem;padding:1.5rem 3rem;margin:0;background:var(--bg)}
+
+.card-timeline-scroll{display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;padding:0 3rem;pointer-events:none;margin-top:-.25rem}
+.card-timeline-scroll::-webkit-scrollbar{display:none}
+.card-timeline-scroll .ct-spacer{flex-shrink:0}
+.card-timeline-scroll .ct-label{font-family:'Mundial','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap;flex-shrink:0}
+.card-timeline-scroll .ct-line{height:1px;background:var(--border);flex-shrink:0}
+.carousel-wrap{position:relative}
+
+.carousel-scroll-hint{position:absolute;right:3rem;top:50%;transform:translateY(-50%);width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.85);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;transition:opacity .4s,transform .4s;backdrop-filter:blur(6px);box-shadow:0 4px 16px rgba(0,0,0,.1)}
+.carousel-scroll-hint svg{width:28px;height:28px;color:var(--accent)}
+.carousel-scroll-hint:hover{background:#fff;box-shadow:0 6px 24px rgba(0,0,0,.15)}
+.carousel-scroll-hint.hidden{opacity:0;pointer-events:none;transform:translateY(-50%) translateX(10px)}
+.card-carousel{display:flex;gap:1.25rem;overflow-x:auto;overflow-y:visible;scroll-snap-type:x mandatory;padding:8px 0 1.5rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.card-carousel::before,.card-carousel::after{content:'';flex-shrink:0;width:1.75rem}
+.card-carousel::before{scroll-snap-align:start}
+.card-carousel::-webkit-scrollbar{display:none}
+.card-thumb{flex:0 0 540px;height:500px;border-radius:16px;overflow:hidden;cursor:pointer;position:relative;scroll-snap-align:start;transition:transform .3s,box-shadow .3s;box-shadow:inset 0 0 0 2px transparent}
+.card-thumb:hover{transform:translateY(-4px);box-shadow:inset 0 0 0 2px transparent,0 12px 40px rgba(0,0,0,.12)}
+.card-thumb.active{box-shadow:inset 0 0 0 2px var(--accent)}
+.card-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.card-thumb-overlay{position:absolute;bottom:0;left:0;right:0;padding:1.5rem;background:linear-gradient(to top,rgba(0,0,0,.55) 0%,transparent 100%);display:flex;flex-direction:row;align-items:flex-end;justify-content:space-between;gap:1rem}
+.card-thumb-tags{display:flex;flex-wrap:wrap;gap:.4rem;flex:1}
+.card-thumb-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:#fff;white-space:nowrap;text-align:right;flex-shrink:0}
+.card-thumb-tag{font-family:'Mundial','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:.35rem .9rem;backdrop-filter:blur(4px);white-space:nowrap}
+.card-info-tag+.card-info-tag::before{content:'·';margin-right:.5rem;color:var(--border)}
+
+.card-info-box{margin:3.5rem 3rem 2.5rem;border:1px solid var(--border);border-radius:999px;padding:1rem 1.75rem;display:flex;flex-direction:row;align-items:center;gap:1.5rem;background:var(--card-bg);cursor:pointer;transition:background .2s;min-height:80px;height:80px;overflow:hidden}
+.card-info-box:hover{background:rgba(0,0,0,.02);border-color:var(--accent)}
+.card-info-left{display:flex;flex-direction:column;gap:.1rem;flex-shrink:0;width:160px}
+.card-info-num{font-size:.58rem;letter-spacing:.14em;color:var(--accent)}
+.card-info-name{font-family:'DM Serif Display',serif;font-size:1.6rem;font-weight:300;line-height:1.1;letter-spacing:-.02em;color:var(--fg)}
+.card-info-desc{font-size:.78rem;line-height:1.6;color:var(--muted);overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;min-width:0}
+.card-info-cta{display:flex;align-items:center;justify-content:center;gap:.6rem;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;padding:.55rem 1.2rem;border:none;border-radius:999px;transition:all .3s;white-space:nowrap;background:var(--accent);flex-shrink:0}
+.card-info-cta:hover{background:#b5441f}
+.card-info-tags{display:flex;flex-direction:row;flex-wrap:wrap;gap:0;align-items:center}
+.card-info-tag{font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap;margin-right:.5rem}
+.project-card{border:none;margin:0;overflow:hidden;background:transparent}
 .project-panel{max-height:0;overflow:hidden;transition:max-height 1.4s cubic-bezier(.16,1,.3,1)}
 .project-card.open .project-panel{max-height:20000px;border-top:1px solid var(--border)}
+@media(max-width:768px){
+.card-carousel{padding:8px 0 2.5rem;gap:1rem}
+.card-carousel::before,.card-carousel::after{width:1.5rem}
+.card-thumb{flex:0 0 340px;height:340px;border-radius:12px}
+.carousel-scroll-hint{right:1.5rem;width:52px;height:52px}
+.carousel-scroll-hint svg{width:22px;height:22px}
+.card-timeline{padding:0 1.5rem}
+.card-timeline-scroll{padding:0 1.5rem}
+.card-info-box{margin:2rem 1.5rem;padding:1rem 1.5rem;height:auto;min-height:0;border-radius:20px;gap:1rem}
+.card-info-desc{display:none}
+.card-info-tags{flex-direction:row;flex-wrap:wrap;align-items:flex-start;gap:.3rem}
+}
 .panel-header{padding:3rem 3rem 2rem;display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--border)}
 .panel-title-block{display:flex;flex-direction:column;gap:.5rem}
 .panel-subtitle{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.panel-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,4rem);font-weight:300}
+.panel-title{font-family:'DM Serif Display',serif;font-size:clamp(2rem,5vw,4rem);font-weight:300}
 .panel-close{background:none;border:1px solid var(--border);cursor:pointer;width:2.5rem;height:2.5rem;border-radius:50%;font-size:1rem;color:var(--fg);display:flex;align-items:center;justify-content:center;transition:all .25s;flex-shrink:0;margin-top:.5rem}
 .panel-close:hover{background:var(--fg);color:var(--bg);border-color:var(--fg)}
 .panel-caption{padding:2.5rem 3rem;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:3rem}
@@ -157,7 +190,7 @@ nav.scrolled::before{opacity:.96;border-bottom-color:var(--border)}
 .air-problem-panel{background:#ffffff;display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:840px;line-height:normal;font-family:'Mundial','Helvetica Neue',Helvetica,Arial,sans-serif}
 .app-left{padding:4rem 3.5rem;display:flex;flex-direction:column;justify-content:center;gap:2rem;border-right:1px solid rgba(0,0,0,.08)}
 .app-eyebrow{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-.app-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;line-height:1.15;color:var(--fg);letter-spacing:-.01em}
+.app-headline{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;line-height:1.15;color:var(--fg);letter-spacing:-.01em}
 .app-body{font-size:.88rem;line-height:1.85;color:rgba(0,0,0,.55);font-weight:300}
 .app-body strong{color:rgba(0,0,255,255,.9);font-weight:400}
 .app-stat{display:flex;align-items:center;gap:1rem;border-top:1px solid rgba(0,0,0,.1);padding-top:1.5rem;margin-top:.5rem}
@@ -196,7 +229,7 @@ nav.scrolled::before{opacity:.96;border-bottom-color:var(--border)}
 .occ-safety-split{display:grid;grid-template-columns:1fr 1.2fr;min-height:700px}
 .occ-safety-text{padding:4rem 3.5rem;display:flex;flex-direction:column;justify-content:center}
 .occ-safety-eyebrow{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:#C9A84C;margin-bottom:1.2rem}
-.occ-safety-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;line-height:1.1;color:var(--fg);letter-spacing:-.02em;margin-bottom:1.5rem}
+.occ-safety-title{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;line-height:1.1;color:var(--fg);letter-spacing:-.02em;margin-bottom:1.5rem}
 .occ-safety-sub{font-size:.85rem;line-height:1.85;color:var(--muted);margin-bottom:2rem;max-width:480px}
 .occ-safety-stats-inline{display:flex;gap:1.5rem;margin-bottom:2rem}
 .occ-safety-stat-inline{flex:1;background:rgba(0,0,0,.03);border:1px solid var(--border);border-radius:12px;padding:1.5rem;display:flex;flex-direction:column;gap:.4rem}
@@ -215,7 +248,7 @@ nav.scrolled::before{opacity:.96;border-bottom-color:var(--border)}
 .occ-painopp-panel{background:#fff;padding:4rem 3.5rem}
 .occ-painopp-header{margin-bottom:2.5rem}
 .occ-painopp-eyebrow{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:#C9A84C;margin-bottom:1rem}
-.occ-painopp-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;line-height:1.1;color:var(--fg);letter-spacing:-.02em}
+.occ-painopp-title{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;line-height:1.1;color:var(--fg);letter-spacing:-.02em}
 .occ-painopp-rows{display:flex;flex-direction:column;gap:1.25rem}
 .occ-painopp-row{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--border);border-radius:12px;overflow:hidden}
 .occ-painopp-pain{padding:1.75rem;background:#3d3d3d}
@@ -230,7 +263,7 @@ nav.scrolled::before{opacity:.96;border-bottom-color:var(--border)}
 @media(max-width:768px){.occ-painopp-panel{padding:2.5rem 1.5rem}.occ-painopp-row{grid-template-columns:1fr}.occ-painopp-opp{border-left:none;border-top:1px solid var(--border)}}
 .opp-top{max-width:760px;margin-bottom:3rem}
 .opp-eyebrow{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:#C9A84C;margin-bottom:1.2rem}
-.opp-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:300;line-height:1.1;color:#fff;letter-spacing:-.02em;margin-bottom:1.5rem}
+.opp-headline{font-family:'DM Serif Display',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:300;line-height:1.1;color:#fff;letter-spacing:-.02em;margin-bottom:1.5rem}
 .opp-body{font-size:.88rem;line-height:1.85;color:rgba(255,255,255,.7);font-weight:300}
 .opp-body strong{color:#C9A84C;font-weight:600}
 .opp-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;margin-bottom:2.5rem}
@@ -264,7 +297,7 @@ nav.scrolled::before{opacity:.96;border-bottom-color:var(--border)}
 .anim-text{padding:4rem 3.5rem;display:flex;flex-direction:column;justify-content:center;background:var(--bg)}
 .anim-eyebrow{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem;display:flex;align-items:center;gap:.75rem}
 .anim-eyebrow::before{content:'';width:1.5rem;height:1px;background:var(--accent)}
-.anim-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,2.5vw,2.4rem);font-weight:300;line-height:1.1;letter-spacing:-.02em;color:var(--fg);margin-bottom:1.25rem}
+.anim-title{font-family:'DM Serif Display',serif;font-size:clamp(1.6rem,2.5vw,2.4rem);font-weight:300;line-height:1.1;letter-spacing:-.02em;color:var(--fg);margin-bottom:1.25rem}
 .anim-title em{font-style:italic;color:var(--accent)}
 .anim-desc{font-size:.85rem;line-height:1.85;color:var(--muted);margin-bottom:1.5rem;max-width:420px}
 .anim-meta{display:flex;flex-direction:column;gap:.4rem}
@@ -272,7 +305,7 @@ nav.scrolled::before{opacity:.96;border-bottom-color:var(--border)}
 .anim-meta-label{letter-spacing:.1em;text-transform:uppercase;color:var(--fg);font-weight:400;min-width:70px}
 @media(max-width:768px){.anim-showcase{grid-template-columns:1fr}.anim-text{padding:2.5rem 1.5rem}}
 .contact-section{border-top:1px solid var(--border);padding:6rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
-.contact-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:300;line-height:1.05;letter-spacing:-.02em}
+.contact-headline{font-family:'DM Serif Display',serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:300;line-height:1.05;letter-spacing:-.02em}
 .contact-headline em{font-style:italic;color:var(--accent)}
 .contact-links{display:flex;flex-direction:column;padding-top:.5rem}
 .clink{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--fg);position:relative;overflow:hidden;transition:color .3s}
@@ -302,10 +335,11 @@ nav,.work-section,.contact-section{padding-left:1.5rem;padding-right:1.5rem}
 .scroll-hint{display:none}
 .scroll-hint-mobile{display:flex;flex-direction:row;align-items:center;gap:.6rem;margin-top:.75rem;opacity:0;animation:fadeUp .9s .8s ease forwards}
 .scroll-hint-mobile span{font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent)}
-.about-strip{grid-template-columns:1fr;padding:2.5rem 1.5rem;gap:0;border-bottom:none}
-.about-strip>div{padding:1.5rem 0;border-bottom:1px solid var(--border)}
-.about-strip>div:first-child{padding-top:0}
-.about-strip>div:last-child{border-bottom:none;padding-bottom:0}
+.about-strip{flex-direction:column;padding:2rem 1.5rem;gap:0}
+.about-item{padding:1.25rem 0 !important;border-left:none !important}
+.about-item+.about-item{border-top:1px solid var(--border) !important;border-left:none !important}
+.about-item:first-child{padding-top:0 !important}
+.about-item:last-child{padding-bottom:0 !important}
 .scroll-line{display:none}
 .mast-ghost{display:none}
 .air-problem-panel{grid-template-columns:1fr;min-height:auto}
@@ -357,11 +391,8 @@ footer{flex-direction:column;gap:.5rem;text-align:center}}
 @media(max-width:768px){
 .card-type{flex-direction:row;flex-wrap:wrap;align-items:flex-start;gap:.3rem .5rem}
 .card-type span:not(:last-child)::after{content:'\2022';display:inline;width:auto;height:auto;background:none;margin:0 0 0 .45rem;font-size:1.1em;font-weight:700;color:var(--fg)}
-.card-trigger{grid-template-columns:1fr;height:auto;min-height:auto}
-.card-trigger-info{padding:2rem 1.5rem}
-.card-bg{min-height:250px}
 .section-header#hardware-uiux{padding:2rem 1.5rem}
-.section-divider-label{font-size:.58rem}
+.section-divider-label{font-size:.6rem}
 .section-header.section-header--visible{padding:2rem 1.5rem}
 }
 
@@ -427,21 +458,38 @@ document.addEventListener('DOMContentLoaded',function(){
 <div class="mast-content">
 <p class="mast-eyebrow">Industrial &amp; Product Designer</p>
 <div class="mast-name-row"><h1 class="mast-name">Avadh<br><em>Rana</em></h1>
-<div class="mast-right"><div class="mast-cat-btns"><a href="#hardware-design" class="mast-cat-btn">Hardware Design <span class="btn-arrow">&#x2193;</span></a><a href="#hardware-uiux" class="mast-cat-btn">Hardware + UI/UX <span class="btn-arrow">&#x2193;</span></a></div><a href="services.html" class="mast-svc-btn">Freelance Services <span class="btn-arrow">&#x2192;</span></a><div class="scroll-hint"><span>Scroll</span><div class="si-chevron"></div><div class="scroll-line"></div></div></div>
+<div class="mast-right"><div class="mast-cat-btns"><a href="#hardware-design" class="mast-cat-btn" id="btnHardwareDesign">Hardware Design <span class="btn-arrow">&#x2193;</span></a><a href="#hardware-uiux" class="mast-cat-btn" id="btnHardwareUiux">Hardware + UI/UX <span class="btn-arrow">&#x2193;</span></a></div><a href="services.html" class="mast-svc-btn">Freelance Services <span class="btn-arrow">&#x2192;</span></a><div class="scroll-hint"><span>Scroll</span><div class="si-chevron"></div><div class="scroll-line"></div></div></div>
 </div>
 <p class="mast-bio">Multidisciplinary designer focused on building intuitive, user-centered products. Previous graduate student from Georgia Tech, with a design background spanning Stryker, FlexiSpot, and more.</p>
 <div class="scroll-hint-mobile"><span>Scroll to explore</span><div class="si-chevron"></div></div>
 <div class="mast-tags"><span class="tag">Industrial Design</span><span class="tag">UX/UI</span><span class="tag">Product Development</span><span class="tag">Human-Centered Design</span></div>
 </div></section>
-<div class="about-strip"><div><div class="about-label">Education</div><div class="about-value">MS Industrial Design &nbsp;&middot;&nbsp; Georgia Institute of Technology<br>&mdash;<br>BS Biomedical Engineering &nbsp;&middot;&nbsp; University of South Carolina</div></div><div><div class="about-label">Industry Experience</div><div class="about-value">Georgia Tech &nbsp;&middot;&nbsp; FlexiSpot &nbsp;&middot;&nbsp; Stryker</div></div><div><div class="about-label">Discipline</div><div class="about-value">Industrial &amp; Product Design</div></div></div>
+<div class="about-strip">
+<div class="about-item"><div class="about-label">Education</div><div class="about-value"><span class="degree">MS Industrial Design</span><span class="school">Georgia Institute of Technology</span></div><div class="about-value"><span class="degree">BS Biomedical Engineering</span><span class="school">University of South Carolina</span></div></div>
+<div class="about-item"><div class="about-label">Experience</div><div class="about-exp-grid"><div class="about-value"><span class="degree">FlexiSpot</span><span class="school">Industrial Designer</span></div><div class="about-value"><span class="degree">Cognizant</span><span class="school">Industrial Designer</span></div><div class="about-value"><span class="degree">Stryker</span><span class="school">Design Specialist</span></div><div class="about-value"><span class="degree">Georgia Tech</span><span class="school">Graduate Teaching Assistant</span></div></div></div>
+<div class="about-item"><div class="about-label">Disciplines</div><div class="about-value">Industrial &amp; Product Design</div><div class="about-value">Design Engineering</div><div class="about-value">Product Animation</div></div>
+</div>
 <div class="marquee-wrap"><div class="marquee-inner"><span>UI/UX</span><span class="dot">&middot;</span><span>Prototyping</span><span class="dot">&middot;</span><span>Human Factors</span><span class="dot">&middot;</span><span>3D Modeling</span><span class="dot">&middot;</span><span>Design Research</span><span class="dot">&middot;</span><span>Form Development</span><span class="dot">&middot;</span><span>CMF</span><span class="dot">&middot;</span><span>Ergonomics</span><span class="dot">&middot;</span><span>UI/UX</span><span class="dot">&middot;</span><span>Prototyping</span><span class="dot">&middot;</span><span>Human Factors</span><span class="dot">&middot;</span><span>3D Modeling</span><span class="dot">&middot;</span><span>Design Research</span><span class="dot">&middot;</span><span>Form Development</span><span class="dot">&middot;</span><span>CMF</span><span class="dot">&middot;</span><span>Ergonomics</span><span class="dot">&middot;</span></div></div>
 <section class="work-section" id="work">
-<div class="section-header" id="hardware-design"><span class="section-num">01</span><h2 class="section-title">Hardware Design</h2></div>
-<div class="project-card" id="card-0">
-<div class="card-trigger" onclick="toggleCard(0)">
-<div class="card-bg"><img src="images/wf_title.png" alt="Wayfarer"></div>
-<div class="card-trigger-info"><div class="card-top"><span class="card-category">Hardware Design</span><span class="card-num">Project 01 &nbsp;/&nbsp; 2025</span><h3 class="card-name">Wayfarer</h3><p class="card-desc">A portable induction cooktop burner designed for FlexiSpot, featuring a low-profile form factor with an intuitive knurled aluminum knob and backlit touch controls.</p><span class="card-type"><span>Kitchen</span><span>Induction</span><span>Portable</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
+<div class="section-header" id="hardware-design"></div>
+
+<div class="carousel-wrap" id="carouselWrap"><div class="card-carousel" id="cardCarousel">
+<div class="card-thumb" data-card="0" onclick="selectAndOpen(0)"><img src="images/wf_7.png" alt="Wayfarer"><div class="card-thumb-overlay"><div class="card-thumb-tags"><span class="card-thumb-tag">Kitchen</span><span class="card-thumb-tag">Induction</span><span class="card-thumb-tag">Portable</span></div><span class="card-thumb-title">Wayfarer</span></div></div>
+<div class="card-thumb" data-card="1" onclick="selectAndOpen(1)"><img src="images/img_01.jpg" alt="Onyx Chair" style="transform:scaleX(-1)"><div class="card-thumb-overlay"><div class="card-thumb-tags"><span class="card-thumb-tag">Furniture</span><span class="card-thumb-tag">Ergonomics</span><span class="card-thumb-tag">Office Chair</span></div><span class="card-thumb-title">Onyx Chair</span></div></div>
+<div class="card-thumb" data-card="2" onclick="selectAndOpen(2)"><img src="images/img_24.jpg" alt="AirBrace"><div class="card-thumb-overlay"><div class="card-thumb-tags"><span class="card-thumb-tag">Medical Device</span><span class="card-thumb-tag">Wearable</span><span class="card-thumb-tag">Rehabilitation</span></div><span class="card-thumb-title">AirBrace</span></div></div>
+<div class="card-thumb" data-card="3" onclick="selectAndOpen(3)"><img src="images/img_33.jpg" alt="Lifewoven" style="object-position:center 65%"><div class="card-thumb-overlay"><div class="card-thumb-tags"><span class="card-thumb-tag">Transportation</span><span class="card-thumb-tag">Healthcare</span><span class="card-thumb-tag">Systems Design</span></div><span class="card-thumb-title">Lifewoven</span></div></div>
+<div class="card-thumb" data-card="4" onclick="selectAndOpen(4)"><img src="images/occupate_card.png" alt="Occupate"><div class="card-thumb-overlay"><div class="card-thumb-tags"><span class="card-thumb-tag">Safety Systems</span><span class="card-thumb-tag">IoT</span><span class="card-thumb-tag">Occupancy Monitoring</span></div><span class="card-thumb-title">Occupate</span></div></div>
+</div><div class="carousel-scroll-hint" id="carouselArrow"><svg viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
 </div>
+<div class="card-timeline-scroll" id="cardTimeline"></div>
+<div class="card-info-box" id="cardInfoBox" onclick="openActiveCard()">
+<div class="card-info-left"><span class="card-info-num" id="infoNum">Project 01 / 2025</span><div class="card-info-name" id="infoName">Wayfarer</div></div>
+<div class="card-info-desc" id="infoDesc">A portable induction cooktop burner designed for FlexiSpot, featuring a low-profile form factor with an intuitive knurled aluminum knob and backlit touch controls.</div>
+<div class="card-info-cta">Open Project <span>&#x2193;</span></div>
+</div>
+<div class="section-header" id="hardware-uiux"></div>
+<div id="projectScrollAnchor"></div>
+<div class="project-card" id="card-0">
 <div class="project-panel">
 <div class="panel-header"><div class="panel-title-block"><span class="panel-subtitle">Kitchen &nbsp;&middot;&nbsp; Product Design &nbsp;&middot;&nbsp; 3 Weeks &nbsp;&middot;&nbsp; 2025</span><h2 class="panel-title">Wayfarer</h2></div><button class="panel-close" onclick="toggleCard(0);event.stopPropagation()">&#x2715;</button></div>
 <div class="panel-caption"><div class="panel-desc">Wayfarer is a portable induction cooktop burner designed for FlexiSpot, featuring a low-profile form factor with an intuitive knurled aluminum knob and backlit touch controls.</div><div class="panel-specs"><div class="spec"><span class="spec-label">Category</span><span class="spec-value">Kitchen &amp; Appliance</span></div>
@@ -465,15 +513,12 @@ document.addEventListener('DOMContentLoaded',function(){
 <div class="gal-full"><img src="images/wf_7.png" loading="lazy"></div>
 <div class="gal-full"><img src="images/wf_8.png" loading="lazy"></div>
 </div></div>
+
 </div></div>
 <div class="project-card" id="card-1">
-<div class="card-trigger" onclick="toggleCard(1)">
-<div class="card-bg"><img src="images/img_01.jpg" alt="Onyx Chair"></div>
-<div class="card-trigger-info"><div class="card-top"><span class="card-category">Hardware Design</span><span class="card-num">Project 02 &nbsp;/&nbsp; 2026</span><h3 class="card-name">Onyx Chair</h3><p class="card-desc">An office chair with motorized lumbar support, conceived through an intensive 8-week design sprint at Georgia Tech.</p><span class="card-type"><span>Furniture</span><span>Ergonomics</span><span>Office Chair</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
-</div>
 <div class="project-panel">
 <div class="panel-header"><div class="panel-title-block"><span class="panel-subtitle">Furniture &nbsp;&middot;&nbsp; Ergonomics &nbsp;&middot;&nbsp; 8 Weeks &nbsp;&middot;&nbsp; 2026</span><h2 class="panel-title">Onyx Chair</h2></div><button class="panel-close" onclick="toggleCard(1);event.stopPropagation()">&#x2715;</button></div>
-<div class="panel-caption"><div class="panel-desc">The Onyx Chair is an office chair with motorized lumbar support, conceived through an intensive 8-week design sprint.</div><div class="panel-specs"><div class="spec"><span class="spec-label">Category</span><span class="spec-value">Furniture &amp; Seating</span></div>
+<div class="panel-caption"><div class="panel-desc">The Onyx Chair is an office chair with motorized lumbar support, conceived during an intensive 8-week design sprint at FlexiSpot. Rooted in ergonomic research, the project addresses a gap in the market for intuitive, precision-adjustable lumbar support for long-duration seated work.</div><div class="panel-specs"><div class="spec"><span class="spec-label">Category</span><span class="spec-value">Furniture &amp; Seating</span></div>
 <div class="spec"><span class="spec-label">Focus</span><span class="spec-value">Ergonomics &amp; Motorized Lumbar</span></div>
 <div class="spec"><span class="spec-label">Duration</span><span class="spec-value">8 Weeks</span></div>
 <div class="spec"><span class="spec-label">Year</span><span class="spec-value">2026</span></div>
@@ -514,15 +559,12 @@ document.addEventListener('DOMContentLoaded',function(){
 <div class="gal-full"><img src="images/img_11.jpg" loading="lazy"></div>
 <div class="gal-full"><img src="images/img_01.jpg" loading="lazy"></div>
 </div></div>
+
 </div></div>
 <div class="project-card" id="card-2">
-<div class="card-trigger" onclick="toggleCard(2)">
-<div class="card-bg"><img src="images/img_12.jpg" alt="AirBrace"></div>
-<div class="card-trigger-info"><div class="card-top"><span class="card-category">Hardware Design</span><span class="card-num">Project 03 &nbsp;/&nbsp; 2023</span><h3 class="card-name">AirBrace</h3><p class="card-desc">An air-circulating leg brace designed for post-surgical rehabilitation, rethinking a form factor that hasn’t changed in decades.</p><span class="card-type"><span>Medical Device</span><span>Wearable</span><span>Rehabilitation</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
-</div>
 <div class="project-panel">
 <div class="panel-header"><div class="panel-title-block"><span class="panel-subtitle">Medical Device &nbsp;&middot;&nbsp; Wearable &nbsp;&middot;&nbsp; 8 Weeks &nbsp;&middot;&nbsp; 2023</span><h2 class="panel-title">AirBrace</h2></div><button class="panel-close" onclick="toggleCard(2);event.stopPropagation()">&#x2715;</button></div>
-<div class="panel-caption"><div class="panel-desc">AirBrace is an air-circulating leg brace designed for post-surgical rehabilitation and injury recovery.</div><div class="panel-specs"><div class="spec"><span class="spec-label">Category</span><span class="spec-value">Medical Device &amp; Wearable</span></div>
+<div class="panel-caption"><div class="panel-desc">AirBrace is an air-circulating orthopedic leg brace designed for post-surgical rehabilitation and injury recovery. The project challenges a form factor that has gone largely unchanged for decades, targeting the chronic discomfort of heat and moisture buildup that plagues long-term brace wearers.</div><div class="panel-specs"><div class="spec"><span class="spec-label">Category</span><span class="spec-value">Medical Device &amp; Wearable</span></div>
 <div class="spec"><span class="spec-label">Focus</span><span class="spec-value">Rehabilitation &amp; Airflow</span></div>
 <div class="spec"><span class="spec-label">Duration</span><span class="spec-value">8 Weeks</span></div>
 <div class="spec"><span class="spec-label">Year</span><span class="spec-value">2023</span></div>
@@ -560,11 +602,8 @@ document.addEventListener('DOMContentLoaded',function(){
 </div></div>
 </div></div>
 <div class="section-header" id="hardware-uiux"><div class="section-divider-line"></div><span class="section-divider-label">Hardware + UI/UX</span></div>
+</div></div>
 <div class="project-card card-flip" id="card-3">
-<div class="card-trigger" onclick="toggleCard(3)">
-<div class="card-bg"><img src="images/img_33.jpg" alt="Lifewoven" style="object-position:center 65%"></div>
-<div class="card-trigger-info"><div class="card-top"><span class="card-category">Hardware + UI/UX</span><span class="card-num">Project 04 &nbsp;/&nbsp; 2024</span><h3 class="card-name">Lifewoven</h3><p class="card-desc">A mobile medical checkup vehicle designed to bring healthcare assessments and medication to people with debilitating chronic conditions.</p><span class="card-type"><span>Transportation</span><span>Healthcare</span><span>Systems Design</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
-</div>
 <div class="project-panel">
 <div class="panel-header"><div class="panel-title-block"><span class="panel-subtitle">Transportation &nbsp;&middot;&nbsp; Healthcare &nbsp;&middot;&nbsp; Systems Design &nbsp;&middot;&nbsp; 2024</span><h2 class="panel-title">Lifewoven</h2></div><button class="panel-close" onclick="toggleCard(3);event.stopPropagation()">&#x2715;</button></div>
 <div class="panel-caption"><div class="panel-desc">Lifewoven is a mobile medical checkup vehicle designed to bring healthcare assessments and medication to people with debilitating chronic conditions.</div><div class="panel-specs"><div class="spec"><span class="spec-label">Category</span><span class="spec-value">Transportation &amp; Systems Design</span></div>
@@ -581,12 +620,9 @@ document.addEventListener('DOMContentLoaded',function(){
 <div class="gal-full"><img src="images/img_32.jpg" loading="lazy"></div>
 <div class="gal-full"><img src="images/img_33.jpg" loading="lazy"></div>
 </div></div>
+
 </div></div>
 <div class="project-card card-flip" id="card-4">
-<div class="card-trigger" onclick="toggleCard(4)">
-<div class="card-bg"><img src="images/img_34.jpg" alt="Occupate"></div>
-<div class="card-trigger-info"><div class="card-top"><span class="card-category">Hardware + UI/UX</span><span class="card-num">Project 05 &nbsp;/&nbsp; 2023</span><h3 class="card-name">Occupate</h3><p class="card-desc">A real-time occupancy monitoring system designed to prevent overcrowding, improve fire safety compliance, and help people find available space.</p><span class="card-type"><span>Safety Systems</span><span>IoT</span><span>Occupancy Monitoring</span></span></div><div class="card-cta">View Project <span class="arrow">&#x2192;</span></div></div>
-</div>
 <div class="project-panel">
 <div class="panel-header"><div class="panel-title-block"><span class="panel-subtitle">Safety Systems &nbsp;&middot;&nbsp; IoT &nbsp;&middot;&nbsp; UI/UX &nbsp;&middot;&nbsp; 2023</span><h2 class="panel-title">Occupate</h2></div><button class="panel-close" onclick="toggleCard(4);event.stopPropagation()">&#x2715;</button></div>
 <div class="panel-caption"><div class="panel-desc">Occupate is a real-time occupancy monitoring system designed to prevent overcrowding, improve fire safety compliance, and help people find available space — from university buildings to warehouses and event venues.</div><div class="panel-specs"><div class="spec"><span class="spec-label">Category</span><span class="spec-value">Safety Systems &amp; IoT</span></div>
@@ -664,6 +700,7 @@ document.addEventListener('DOMContentLoaded',function(){
 <div class="gal-full"><img src="images/img_46.jpg" loading="lazy"></div>
 <div class="gal-full"><img src="images/img_47.jpg" loading="lazy"></div>
 </div></div>
+
 </div></div>
 </section>
 <div class="section-header section-header--visible"><span class="section-divider-label">Product Animation</span><div class="section-divider-line"></div></div>
@@ -712,9 +749,124 @@ var ghost=document.getElementById('ghostText');window.addEventListener('scroll',
 document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href').slice(1);var target=document.getElementById(id);if(!target)return;e.preventDefault();var top=target.getBoundingClientRect().top+window.pageYOffset-80;window.scrollTo({top:top,behavior:'smooth'});});});
 document.addEventListener('contextmenu',function(e){if(e.target.tagName==='IMG')e.preventDefault();});
 document.addEventListener('dragstart',function(e){if(e.target.tagName==='IMG')e.preventDefault();});
+// Card carousel data
+var cardData=[
+{num:'Project 01 / 2025',name:'Wayfarer',desc:'A portable induction cooktop burner designed for FlexiSpot, featuring a low-profile form factor with an intuitive knurled aluminum knob and backlit touch controls.',tags:['Kitchen','Induction','Portable']},
+{num:'Project 02 / 2026',name:'Onyx Chair',desc:'An office chair with motorized lumbar support, conceived during an intensive 8-week design sprint at FlexiSpot. Rooted in ergonomic research, the chair addresses a gap in the market for intuitive, precision-adjustable lumbar support for long-duration seated work.',tags:['Furniture','Ergonomics','Office Chair']},
+{num:'Project 03 / 2023',name:'AirBrace',desc:'An air-circulating orthopedic leg brace designed for post-surgical rehabilitation and injury recovery. The project challenges a form factor that has gone largely unchanged for decades, targeting the chronic discomfort of heat and moisture buildup that plagues long-term brace wearers.',tags:['Medical Device','Wearable','Rehabilitation']},
+{num:'Project 04 / 2024',name:'Lifewoven',desc:'A mobile medical checkup vehicle designed to bring healthcare assessments and medication to people with debilitating chronic conditions.',tags:['Transportation','Healthcare','Systems Design']},
+{num:'Project 05 / 2023',name:'Occupate',desc:'A real-time occupancy monitoring system designed to prevent overcrowding, improve fire safety compliance, and help people find available space.',tags:['Safety Systems','IoT','Occupancy Monitoring']}
+];
+var activeCard=0;
+function selectCard(idx){
+activeCard=idx;
+var thumbs=document.querySelectorAll('.card-thumb');
+thumbs.forEach(function(t,i){t.classList.toggle('active',i===idx);});
+document.getElementById('infoNum').textContent=cardData[idx].num;
+document.getElementById('infoName').textContent=cardData[idx].name;
+document.getElementById('infoDesc').textContent=cardData[idx].desc;
+}
+function closeAllCards(){
+for(var i=0;i<5;i++){
+var c=document.getElementById('card-'+i);
+if(c)c.classList.remove('open');
+}
+visibleCard=null;
+hideScrollIndicator();
+}
+function openCard(idx){
+closeAllCards();
+selectCard(idx);
+var card=document.getElementById('card-'+idx);
+if(!card)return;
+card.classList.add('open');
+visibleCard=idx;
+setTimeout(function(){
+var anchor=document.getElementById('projectScrollAnchor');
+if(anchor){
+var top=anchor.getBoundingClientRect().top+window.pageYOffset - 60;
+window.scrollTo({top:top,behavior:'smooth'});
+}
+showScrollIndicator();
+},200);
+}
+function openActiveCard(){openCard(activeCard);}
+function selectAndOpen(idx){openCard(idx);}
+// Hover to preview
+document.querySelectorAll('.card-thumb').forEach(function(thumb){
+thumb.addEventListener('mouseenter',function(){
+var idx=parseInt(thumb.getAttribute('data-card'));
+selectCard(idx);
+});
+});
+// Set first card active on load
+selectCard(0);
+
+// Build synced timeline
+function buildTimeline(){
+var carousel=document.getElementById('cardCarousel');
+var timeline=document.getElementById('cardTimeline');
+if(!carousel||!timeline)return;
+var thumbs=carousel.querySelectorAll('.card-thumb');
+if(thumbs.length<5)return;
+var gap=parseFloat(getComputedStyle(carousel).gap)||20;
+var cardW=thumbs[0].offsetWidth;
+var spacerW=48;
+// Build timeline elements
+timeline.innerHTML='';
+// Left spacer matching carousel
+var sp1=document.createElement('div');sp1.className='ct-spacer';sp1.style.width=spacerW+'px';
+timeline.appendChild(sp1);
+// "Hardware Design" label
+var l1=document.createElement('span');l1.className='ct-label';l1.textContent='Hardware Design';
+timeline.appendChild(l1);
+// Line spanning cards 1,2 gap area (from end of label to start of Lifewoven)
+// Cards: 0=Wayfarer, 1=Onyx, 2=AirBrace, 3=Lifewoven
+// Distance: 3 cards + 3 gaps - label width
+var l1w=l1.offsetWidth;
+var lineW1=(cardW+gap)*3-l1w-12;
+var ln1=document.createElement('div');ln1.className='ct-line';ln1.style.width=Math.max(lineW1,20)+'px';ln1.style.margin='0 6px';
+timeline.appendChild(ln1);
+// "Hardware + UI/UX" label
+var l2=document.createElement('span');l2.className='ct-label';l2.textContent='Hardware + UI/UX';
+timeline.appendChild(l2);
+// Line to end of last card (Occupate = card 4)
+var l2w=l2.offsetWidth;
+var lineW2=(cardW+gap)*2-gap-l2w-12;
+var ln2=document.createElement('div');ln2.className='ct-line';ln2.style.width=Math.max(lineW2,20)+'px';ln2.style.margin='0 6px';
+timeline.appendChild(ln2);
+// Right spacer
+var sp2=document.createElement('div');sp2.className='ct-spacer';sp2.style.width=spacerW+'px';
+timeline.appendChild(sp2);
+// Sync scroll
+carousel.addEventListener('scroll',function(){timeline.scrollLeft=carousel.scrollLeft;});
+}
+setTimeout(buildTimeline,200);
+window.addEventListener('resize',buildTimeline);
+// Arrow show/hide on scroll
+var carouselArrow=document.getElementById('carouselArrow');
+// Scroll timeline labels
+var carousel=document.getElementById('cardCarousel');
+if(carousel&&carouselArrow){
+carouselArrow.addEventListener('click',function(){carousel.scrollBy({left:500,behavior:'smooth'});});
+carousel.addEventListener('scroll',function(){
+var atStart=carousel.scrollLeft<10;
+carouselArrow.classList.toggle('hidden',!atStart);
+});
+}
+if(carousel){carouselArrow.addEventListener('click',function(){carousel.scrollBy({left:500,behavior:'smooth'});});
+carousel.addEventListener('scroll',function(){
+var scrollPct=carousel.scrollLeft/(carousel.scrollWidth-carousel.clientWidth);
+var leftLabel=document.getElementById('timelineLeft');
+var rightLabel=document.getElementById('timelineRight');
+if(leftLabel&&rightLabel){
+leftLabel.style.opacity=1-scrollPct*1.5;
+rightLabel.style.opacity=scrollPct*1.5;
+}
+});}
 var visibleCard=null;
-function toggleCard(idx){var card=document.getElementById('card-'+idx);var wasOpen=card.classList.contains('open');if(wasOpen){card.classList.remove('open');hideScrollIndicator();updateVisibleCard();}else{card.classList.add('open');setTimeout(function(){var panel=card.querySelector('.project-panel');var panelTop=panel.getBoundingClientRect().top+window.pageYOffset-72;window.scrollTo({top:panelTop,behavior:'smooth'});},80);setTimeout(function(){showScrollIndicator();},750);}}
-function closeCurrent(){if(visibleCard!==null){var card=document.getElementById('card-'+visibleCard);var cardTop=card.getBoundingClientRect().top+window.pageYOffset-80;window.scrollTo({top:cardTop,behavior:'smooth'});var dist=Math.abs(window.pageYOffset-cardTop);var delay=dist<100?80:Math.min(dist*0.4,350);setTimeout(function(){card.classList.remove('open');visibleCard=null;hideStickyClose();hideScrollIndicator();},delay);}}
+function toggleCard(idx){var card=document.getElementById('card-'+idx);if(!card)return;var wasOpen=card.classList.contains('open');if(wasOpen){card.classList.remove('open');visibleCard=null;hideStickyClose();hideScrollIndicator();var infoBox=document.getElementById('cardInfoBox');if(infoBox){var top=infoBox.getBoundingClientRect().top+window.pageYOffset-80;window.scrollTo({top:top,behavior:'smooth'});}}else{openCard(idx);}}
+function closeCurrent(){if(visibleCard!==null){var card=document.getElementById('card-'+visibleCard);card.classList.remove('open');visibleCard=null;hideStickyClose();hideScrollIndicator();var infoBox=document.getElementById('cardInfoBox');if(infoBox){var top=infoBox.getBoundingClientRect().top+window.pageYOffset-80;window.scrollTo({top:top,behavior:'smooth'});}}}
 function showScrollIndicator(){var si=document.getElementById('scrollIndicator');if(!si)return;si.style.display='flex';requestAnimationFrame(function(){si.classList.add('visible');si.classList.remove('hidden');});function onScroll(){hideScrollIndicator();window.removeEventListener('scroll',onScroll);}window.addEventListener('scroll',onScroll);}
 function hideScrollIndicator(){var si=document.getElementById('scrollIndicator');if(!si)return;si.classList.remove('visible');si.classList.add('hidden');setTimeout(function(){si.style.display='none';si.classList.remove('hidden');},350);}
 function showPill(el){el.style.display='flex';requestAnimationFrame(function(){el.classList.add('visible');el.classList.remove('hidden');});}
@@ -945,6 +1097,36 @@ window.addEventListener('scroll',function(){updateVisibleCard();updateStickyPos(
   }
 
   setTimeout(showNext, 400);
+})();
+</script>
+<script>
+(function(){
+  function scrollToCarousel(){
+    var wrap=document.getElementById('carouselWrap');
+    if(!wrap)return;
+    var top=wrap.getBoundingClientRect().top+window.pageYOffset-80;
+    window.scrollTo({top:top,behavior:'smooth'});
+  }
+  var btnDesign=document.getElementById('btnHardwareDesign');
+  if(btnDesign){
+    btnDesign.addEventListener('click',function(e){
+      e.preventDefault();
+      scrollToCarousel();
+    });
+  }
+  var btnUiux=document.getElementById('btnHardwareUiux');
+  if(btnUiux){
+    btnUiux.addEventListener('click',function(e){
+      e.preventDefault();
+      scrollToCarousel();
+      var carousel=document.getElementById('cardCarousel');
+      if(carousel){
+        setTimeout(function(){
+          carousel.scrollTo({left:carousel.scrollWidth,behavior:'smooth'});
+        },400);
+      }
+    });
+  }
 })();
 </script>
 </body></html>
