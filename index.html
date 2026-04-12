@@ -143,6 +143,11 @@ nav.scrolled::before{opacity:.96;border-bottom-color:var(--border)}
 .card-thumb-overlay{position:absolute;bottom:0;left:0;right:0;padding:1.5rem;background:linear-gradient(to top,rgba(0,0,0,.55) 0%,transparent 100%);display:flex;flex-direction:row;align-items:flex-end;justify-content:space-between;gap:1rem}
 .card-thumb-tags{display:flex;flex-wrap:wrap;gap:.4rem;flex:1}
 .card-thumb-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:#fff;white-space:nowrap;text-align:right;flex-shrink:0}
+@media(max-width:768px){
+.card-thumb-overlay{flex-direction:column;align-items:flex-start;justify-content:space-between;top:0;background:linear-gradient(to bottom,rgba(0,0,0,.35) 0%,transparent 40%),linear-gradient(to top,rgba(0,0,0,.55) 0%,transparent 40%)}
+.card-thumb-tags{position:absolute;top:1rem;left:1rem;flex-direction:column;align-items:flex-start;gap:.3rem}
+.card-thumb-title{margin-top:auto}
+}
 .card-thumb-tag{font-family:'Mundial','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:.35rem .9rem;backdrop-filter:blur(4px);white-space:nowrap}
 .card-info-tag+.card-info-tag::before{content:'·';margin-right:.5rem;color:var(--border)}
 
@@ -1132,6 +1137,31 @@ window.addEventListener('scroll',function(){updateVisibleCard();updateStickyPos(
       }
     });
   }
+})();
+</script>
+<script>
+(function(){
+  var carousel=document.getElementById('cardCarousel');
+  if(!carousel)return;
+  var scrollTimer=null;
+  carousel.addEventListener('scroll',function(){
+    if(window.innerWidth>768)return;
+    clearTimeout(scrollTimer);
+    scrollTimer=setTimeout(function(){
+      var thumbs=carousel.querySelectorAll('.card-thumb');
+      var carouselLeft=carousel.getBoundingClientRect().left;
+      var best=-1,bestDist=Infinity;
+      thumbs.forEach(function(t,i){
+        var rect=t.getBoundingClientRect();
+        var dist=Math.abs(rect.left-carouselLeft);
+        if(dist<bestDist){bestDist=dist;best=i;}
+      });
+      if(best>=0&&best!==window._lastMobileCard){
+        window._lastMobileCard=best;
+        if(typeof selectCard==='function')selectCard(best);
+      }
+    },80);
+  });
 })();
 </script>
 </body></html>
