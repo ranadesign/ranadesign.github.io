@@ -268,6 +268,48 @@ nav.scrolled::before{opacity:.96;border-bottom-color:var(--border)}
 .occ-painopp-opp-desc{font-size:.8rem;color:var(--muted);line-height:1.6}
 .occ-painopp-hmw{font-size:.78rem;color:#C9A84C;margin-top:.75rem;font-style:italic;line-height:1.5}
 @media(max-width:768px){.occ-painopp-panel{padding:2.5rem 1.5rem}.occ-painopp-row{grid-template-columns:1fr}.occ-painopp-opp{border-left:none;border-top:1px solid var(--border)}}
+/* Wayfarer Opportunity Areas Panel */
+.wf-opp-panel{background:#fff;display:grid;grid-template-columns:1fr 1.6fr;min-height:700px;font-family:'Mundial','Helvetica Neue',Helvetica,Arial,sans-serif;line-height:normal}
+.wf-opp-left{background:var(--fg);padding:3.5rem;display:flex;flex-direction:column;justify-content:center}
+.wf-opp-eyebrow{font-family:'Syne',sans-serif;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:#5BA88C;margin-bottom:1.2rem}
+.wf-opp-title{font-family:'DM Serif Display',serif;font-size:clamp(1.6rem,2.8vw,2.4rem);font-weight:300;line-height:1.12;color:#fff;letter-spacing:-.02em;margin-bottom:1.5rem}
+.wf-opp-title span{color:#5BA88C}
+.wf-opp-subtitle{font-size:.82rem;line-height:1.75;color:rgba(255,255,255,.45)}
+.wf-opp-right{padding:2.5rem 3rem;display:flex;flex-direction:column;gap:1rem;justify-content:center}
+.wf-opp-card{background:#F5F2ED;border-left:3px solid #5BA88C;border-radius:0 8px 8px 0;padding:1.4rem 1.6rem;display:flex;gap:1.1rem;align-items:flex-start}
+.wf-opp-icon{width:38px;height:38px;background:#5BA88C;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.15rem}
+.wf-opp-icon svg{width:18px;height:18px;fill:#fff}
+.wf-opp-card-content{flex:1}
+.wf-opp-card-label{font-family:'Syne',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:#5BA88C;margin-bottom:.35rem;font-weight:700}
+.wf-opp-card-pain{font-size:.72rem;color:var(--muted);font-style:italic;margin-bottom:.55rem;line-height:1.5}
+.wf-opp-card-title{font-family:'Syne',sans-serif;font-size:.85rem;font-weight:600;color:var(--fg);margin-bottom:.35rem;line-height:1.35}
+.wf-opp-card-desc{font-size:.76rem;line-height:1.7;color:rgba(0,0,0,.5)}
+/* Wayfarer Competitor Analysis Panel */
+.wf-comp-panel{background:#fff;padding:3rem 2.5rem;font-family:'Mundial','Helvetica Neue',Helvetica,Arial,sans-serif;line-height:normal}
+.wf-comp-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2rem}
+.wf-comp-header-left{flex:1}
+.wf-comp-stat{text-align:right}
+.wf-comp-stat-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:#5BA88C;line-height:1}
+.wf-comp-stat-label{font-size:.68rem;color:var(--muted);margin-top:.25rem}
+.wf-comp-table-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.wf-comp-table{width:100%;border-collapse:separate;border-spacing:0;font-size:.72rem;table-layout:fixed}
+.wf-comp-table col.wf-col-product{width:16%}
+.wf-comp-table col.wf-col-sm{width:12%}
+.wf-comp-table col.wf-col-feat{width:15%}
+.wf-comp-table th{background:var(--fg);color:#fff;padding:.6rem .5rem;font-family:'Syne',sans-serif;font-size:.56rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-align:center;border:none}
+.wf-comp-table th:first-child{border-radius:6px 0 0 0;text-align:left;padding-left:.8rem}
+.wf-comp-table th:last-child{border-radius:0 6px 0 0}
+.wf-comp-table td{padding:.65rem .5rem;text-align:center;border-bottom:1px solid var(--border);color:rgba(0,0,0,.55);vertical-align:middle;line-height:1.45;word-wrap:break-word}
+.wf-comp-table td:first-child{text-align:left;padding-left:.8rem;font-weight:600;color:var(--fg);font-family:'DM Serif Display',serif;font-size:.78rem}
+.wf-comp-table tr:nth-child(even) td{background:#F5F2ED}
+.wf-comp-table tr.wf-comp-highlight td{background:rgba(91,168,140,.08)}
+.wf-comp-table tr.wf-comp-highlight td:first-child{border-left:3px solid #5BA88C}
+.wf-comp-table tr.wf-comp-highlight .wf-feat{color:#5BA88C;font-weight:600}
+.wf-feat{font-size:.7rem}
+.wf-comp-insight{background:#F5F2ED;border-radius:8px;padding:1rem 1.4rem;margin-top:1.5rem;font-size:.78rem;line-height:1.7;color:rgba(0,0,0,.55)}
+.wf-comp-insight strong{color:#5BA88C;font-weight:600}
+.wf-comp-footnote{font-size:.62rem;color:var(--muted);margin-top:.8rem}
+@media(max-width:768px){.wf-opp-panel{grid-template-columns:1fr;min-height:auto}.wf-opp-left{padding:2.5rem 1.5rem}.wf-opp-right{padding:1.5rem}.wf-comp-panel{padding:2rem 1.2rem}.wf-comp-table-wrap{overflow-x:auto}.wf-comp-table{min-width:580px}.wf-comp-header{flex-direction:column;align-items:flex-start;gap:.8rem}.wf-comp-stat{text-align:left}}
 .opp-top{max-width:760px;margin-bottom:3rem}
 .opp-eyebrow{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:#C9A84C;margin-bottom:1.2rem}
 .opp-headline{font-family:'DM Serif Display',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:300;line-height:1.1;color:#fff;letter-spacing:-.02em;margin-bottom:1.5rem}
@@ -507,7 +549,83 @@ document.addEventListener('DOMContentLoaded',function(){
 </div></div>
 <div class="panel-body"><div class="gal"><div class="gal-full"><img src="images/wf_1.png" loading="lazy"></div>
 <div class="gal-full"><div class="air-problem-panel mint-accent"><div class="app-left"><div class="app-eyebrow">The Problem</div><h3 class="app-headline">Portable cooktops exist.<br>But they all look the same.</h3><p class="app-body">Existing portable induction burners are bulky, cheaply built, and lack any sense of design intentionality &#8212; <strong>turning a countertop staple into an eyesore.</strong></p><div class="app-stat"><span class="app-stat-num">90%</span><span class="app-stat-label">of portable induction burners on the market share the same generic form</span></div></div><div class="app-right"><div class="app-eyebrow" style="margin-bottom:1.25rem">Pain Points</div><div style="display:flex;flex-direction:column;gap:.85rem"><div class="air-sticky"><div class="air-sticky-num">01</div><div class="air-sticky-text">Bulky form factors that waste counter space and resist storage</div></div><div class="air-sticky"><div class="air-sticky-num">02</div><div class="air-sticky-text">Confusing button-heavy interfaces with unnecessary features</div></div><div class="air-sticky"><div class="air-sticky-num">03</div><div class="air-sticky-text">Cheap materials and finishes that don&#8217;t match modern kitchen aesthetics</div></div></div></div></div></div>
+<div class="gal-full"><div class="wf-opp-panel">
+  <div class="wf-opp-left">
+    <div class="wf-opp-eyebrow">Opportunity Areas</div>
+    <h3 class="wf-opp-title">Addressing<br>the Pain<br><span>Points</span></h3>
+    <p class="wf-opp-subtitle">Three pain points identified in the portable induction cooktop market, each paired with a strategic design opportunity for Wayfarer.</p>
+  </div>
+  <div class="wf-opp-right">
+    <div class="wf-opp-card">
+      <div class="wf-opp-icon"><svg viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z" opacity=".5"/><path d="M8 2v2M16 2v2M8 20v2M16 20v2M2 8h2M2 16h2M20 8h2M20 16h2"/></svg></div>
+      <div class="wf-opp-card-content">
+        <div class="wf-opp-card-label">Pain Point 01</div>
+        <div class="wf-opp-card-pain">Bulky form factors that waste counter space and resist storage</div>
+        <div class="wf-opp-card-title">Ultra-slim Profile &amp; Stackable Footprint</div>
+        <div class="wf-opp-card-desc">Design a sub-1.5" profile cooktop with flush edges and a flat underside, enabling vertical storage and minimal counter intrusion. Leverage FlexiSpot's standing-desk design language: low-profile, space-conscious, premium.</div>
+      </div>
+    </div>
+    <div class="wf-opp-card">
+      <div class="wf-opp-icon"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 1 3 3v4a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"/><path d="M10 9v2a2 2 0 0 0 4 0V9" opacity=".5"/><path d="M12 15v5M8 20h8" stroke-width=".5"/></svg></div>
+      <div class="wf-opp-card-content">
+        <div class="wf-opp-card-label">Pain Point 02</div>
+        <div class="wf-opp-card-pain">Confusing button-heavy interfaces with unnecessary features</div>
+        <div class="wf-opp-card-title">Single-Knob Analog Control + Minimal Touch</div>
+        <div class="wf-opp-card-desc">Replace 10+ button panels with a single knurled aluminum dial for power and a backlit touch strip for mode selection. Reduce cognitive load so the interface feels as intuitive as a gas stove dial.</div>
+      </div>
+    </div>
+    <div class="wf-opp-card">
+      <div class="wf-opp-icon"><svg viewBox="0 0 24 24"><path d="M3 3h18v14H3z" opacity=".3"/><path d="M7 21l2-4h6l2 4"/><path d="M12 7v4M10 9h4" opacity=".7"/></svg></div>
+      <div class="wf-opp-card-content">
+        <div class="wf-opp-card-label">Pain Point 03</div>
+        <div class="wf-opp-card-pain">Cheap materials and finishes that don't match modern kitchen aesthetics</div>
+        <div class="wf-opp-card-title">Premium CMF Language &amp; Kitchen Integration</div>
+        <div class="wf-opp-card-desc">Specify brushed aluminum, matte black ceramic glass, and soft-touch silicone feet. The cooktop should look intentional next to a Staub pot or a Breville espresso machine, not like a dorm-room appliance.</div>
+      </div>
+    </div>
+  </div>
+</div></div>
+<div class="gal-full"><div class="wf-comp-panel">
+  <div class="wf-comp-header">
+    <div class="wf-comp-header-left">
+      <div class="wf-opp-eyebrow">Competitor Analysis</div>
+      <h3 class="wf-opp-title" style="color:var(--fg)">How Wayfarer Stacks Up<br>Against the <span>Market</span></h3>
+    </div>
+    <div class="wf-comp-stat">
+      <div class="wf-comp-stat-num">$5.3B</div>
+      <div class="wf-comp-stat-label">Global induction cooktop<br>market size (2026)</div>
+    </div>
+  </div>
+  <div class="wf-comp-table-wrap">
+  <table class="wf-comp-table">
+    <colgroup>
+      <col class="wf-col-product">
+      <col class="wf-col-sm">
+      <col class="wf-col-sm">
+      <col class="wf-col-sm">
+      <col class="wf-col-feat">
+      <col class="wf-col-feat">
+      <col class="wf-col-feat">
+    </colgroup>
+    <thead>
+      <tr><th>Product</th><th>Interface</th><th>Materials</th><th>Price</th><th>Control</th><th>Convenience</th><th>Form Factor</th></tr>
+    </thead>
+    <tbody>
+      <tr class="wf-comp-highlight"><td>Wayfarer (FlexiSpot)</td><td>Single dial + touch strip</td><td>Aluminum / Ceramic glass</td><td>$129*</td><td class="wf-feat">Single knob control</td><td class="wf-feat">Plug and cook setup</td><td class="wf-feat">Stores vertically</td></tr>
+      <tr><td>Duxtop 9600LS</td><td>LCD touch panel</td><td>Plastic / Glass</td><td>$72</td><td class="wf-feat">20 temp presets</td><td class="wf-feat">Quick boil button</td><td class="wf-feat">Child safety lock</td></tr>
+      <tr><td>Breville Control&nbsp;Freak</td><td>Digital + probe</td><td>Stainless steel</td><td>$1,500</td><td class="wf-feat">Probe-based temp control</td><td class="wf-feat">&plusmn;1&deg;F precision</td><td class="wf-feat">Professional grade build</td></tr>
+      <tr><td>NuWave PIC Flex</td><td>Button panel</td><td>Plastic / Glass</td><td>$60</td><td class="wf-feat">3 wattage settings</td><td class="wf-feat">45 temp levels</td><td class="wf-feat">Lightweight 4.4 lbs</td></tr>
+      <tr><td>GreenPan 1800W</td><td>Touch panel</td><td>Plastic / Ceramic</td><td>$85</td><td class="wf-feat">Crevice-free surface</td><td class="wf-feat">Even heat spread</td><td class="wf-feat">Child lock</td></tr>
+      <tr><td>IKEA TILLREDA</td><td>Touch buttons</td><td>Plastic / Glass</td><td>$65</td><td class="wf-feat">Minimalist aesthetic</td><td class="wf-feat">Ultra lightweight</td><td class="wf-feat">Budget friendly</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="wf-comp-insight"><strong>Key Insight:</strong> No competitor currently combines a slim profile, premium materials, and an intuitive analog interface. Wayfarer fills a gap at the intersection of design-forward aesthetics and approachable pricing.</div>
+  <div class="wf-comp-footnote">*Projected MSRP &middot; Sources: CNN Underscored, Precedence Research, ShopSavvy</div>
+</div></div>
 <div class="gal-full"><img src="images/wf_2.png" loading="lazy"></div>
+<div class="gal-full onyx-spacer" style="height:6rem;background:#ffffff"></div>
+<div class="gal-full"><img src="images/wf_cmf.png" loading="lazy"></div>
 <div class="gal-full onyx-spacer" style="height:6rem;background:#ffffff"></div>
 <div class="gal-full"><img src="images/wf_3.png" loading="lazy"></div>
 <div class="gal-full onyx-spacer" style="height:6rem;background:#ffffff"></div>
